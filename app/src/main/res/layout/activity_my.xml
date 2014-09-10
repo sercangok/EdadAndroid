@@ -4,13 +4,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MyActivity"
+    android:weightSum="6"
     android:layout_marginTop="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingBottom="0dp">
+        android:weightSum="5.5"
+        android:layout_weight="4.5">
 
         <ProgressBar
             android:id="@+id/prgKongre"
@@ -21,25 +23,27 @@
 
         <FrameLayout
             android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1.5"
             android:id="@+id/frmKongre"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
+            android:layout_width="match_parent"
             android:background="@drawable/selected"
             android:onClick="onClick_Kongre">
 
 
             <ImageView
-                android:padding="5dp"
+                android:padding="3dp"
                 android:id="@+id/imgKongre"
-                android:layout_width="360dp"
-                android:layout_height="110dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:scaleType="fitXY" />
 
             <com.example.sercangok.edad.view.TextView700
                 android:layout_height="wrap_content"
                 android:textSize="25sp"
-                android:text="Kongre"
+                android:text="KONGRE"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="30dp"
                 android:gravity="center"
@@ -48,10 +52,78 @@
         </FrameLayout>
 
         <FrameLayout
-            android:layout_marginTop="5dp"
-            android:id="@+id/frmHakkimizda"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:id="@+id/frmEtkinlik"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:layout_gravity="center"
+            android:background="@drawable/selected"
+            android:onClick="onClick_Etkinliklerimiz">
+
+            <ImageView
+                android:id="@+id/imgEtkinliklerimiz"
+                android:padding="3dp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitXY" />
+
+            <com.example.sercangok.edad.view.TextView500
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="ETKİNLİKLERİMİZ"
+                android:layout_gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="10"
+                android:gravity="center"
+                android:layout_width="match_parent" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:id="@+id/frmUyelik"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:layout_gravity="center"
+            android:background="@drawable/selected"
+            android:onClick="onClick_Uyelik">
+
+            <ImageView
+                android:id="@+id/imgUyelik"
+                android:padding="3dp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitXY" />
+
+            <com.example.sercangok.edad.view.TextView500
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="ÜYELİK"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="10"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:id="@+id/frmHakkimizda"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
             android:layout_gravity="center"
             android:background="@drawable/selected"
             android:onClick="onClick_Hakkimizda">
@@ -59,16 +131,16 @@
 
             <ImageView
                 android:id="@+id/imgHakkimizda"
-                android:padding="5dp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
+                android:padding="3dp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
                 android:layout_gravity="center"
                 android:scaleType="fitXY" />
 
             <com.example.sercangok.edad.view.TextView500
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="Hakkımızda"
+                android:textSize="16sp"
+                android:text="HAKKIMIZDA"
                 android:layout_gravity="center"
                 android:shadowColor="@android:color/black"
                 android:shadowRadius="10"
@@ -78,84 +150,32 @@
                 android:onClick="onClick_Kongre" />
         </FrameLayout>
 
-        <FrameLayout
-            android:layout_marginTop="5dp"
-            android:id="@+id/frmUyelik"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/selected"
-            android:onClick="onClick_Uyelik">
-
-            <ImageView
-                android:id="@+id/imgUyelik"
-                android:padding="5dp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_gravity="center"
-                android:scaleType="fitXY" />
-
-            <com.example.sercangok.edad.view.TextView500
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="Üyelik"
-                android:shadowColor="@android:color/black"
-                android:shadowRadius="10"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_width="match_parent" />
-        </FrameLayout>
-
 
         <FrameLayout
-            android:layout_marginTop="5dp"
-            android:id="@+id/frmEtkinlik"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/selected"
-            android:onClick="onClick_Etkinliklerimiz">
-
-            <ImageView
-                android:id="@+id/imgEtkinliklerimiz"
-                android:padding="5dp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_gravity="center"
-                android:scaleType="fitXY" />
-
-            <com.example.sercangok.edad.view.TextView500
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="Etkinlikler"
-                android:layout_gravity="center"
-                android:shadowColor="@android:color/black"
-                android:shadowRadius="10"
-                android:gravity="center"
-                android:layout_width="match_parent" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
             android:id="@+id/frmIletisim"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
             android:layout_gravity="center"
             android:background="@drawable/selected"
             android:onClick="onClick_Iletişim">
 
             <ImageView
                 android:id="@+id/imgIletisim"
-                android:padding="5dp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
+                android:padding="3dp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
                 android:layout_gravity="center"
                 android:scaleType="fitXY" />
 
             <com.example.sercangok.edad.view.TextView500
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="İletişim"
+                android:textSize="16sp"
+                android:text="İLETİŞİM"
                 android:shadowColor="@android:color/black"
                 android:shadowRadius="10"
                 android:layout_gravity="center"
@@ -167,6 +187,9 @@
 
     <TableRow
         android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:layout_margin="5dp"
         android:layout_width="match_parent">
 
 
@@ -213,6 +236,7 @@
 
     <FrameLayout
         android:layout_height="wrap_content"
+        android:layout_weight="0.5"
         android:layout_width="match_parent">
 
         <ImageView
