@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border"
+    android:layout_margin="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <com.example.sercangok.edad.view.TextView500
+            android:id="@+id/txtKategori"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:layout_weight="2"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:gravity="center|left" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imgPin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pinbutton"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center" />
+
+            <FrameLayout
+                android:id="@+id/frmTakvimeEkle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/takvimbutton"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/takvimbutton"
+                    android:layout_gravity="center" />
+
+                <com.example.sercangok.edad.view.TextView500
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="12sp"
+                    android:text="Takvime Ekle"
+                    android:textColor="@color/edadFontColor" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="7"
+        android:layout_marginBottom="10dp">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imgAd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/etkinlikyer"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <com.example.sercangok.edad.view.TextView300
+            android:id="@+id/txtAd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_weight="6"
+            android:layout_gravity="center"
+            android:gravity="center|left" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="7"
+        android:layout_marginBottom="10dp">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/imgTarih"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/etkinlikzaman"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <com.example.sercangok.edad.view.TextView300
+            android:id="@+id/txtTarih"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_weight="6"
+            android:layout_gravity="center"
+            android:gravity="center|left" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="7"
+        android:layout_marginBottom="10dp">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imgAdress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/etkinlikadres"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <com.example.sercangok.edad.view.TextView300
+            android:id="@+id/txtAdress"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:layout_weight="6"
+            android:layout_gravity="center"
+            android:gravity="center|left" />
+    </LinearLayout>
+</LinearLayout>

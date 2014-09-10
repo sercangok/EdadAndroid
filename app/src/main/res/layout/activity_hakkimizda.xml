@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sercangok.edad.activity.HakkimizdaActivity"
+    android:orientation="vertical">
+
+
+    <ProgressBar
+        android:id="@+id/prgHakkimizda"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="top|center_horizontal"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/lnrHakkimizda"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:layout_marginRight="20dp">
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/hakkimizdalogo"
+                android:scaleType="fitCenter"
+                android:background="@drawable/circle"
+                android:layout_margin="20dp" />
+
+            <com.example.sercangok.edad.view.TextView300
+                android:id="@+id/txtHakkimizda"
+                android:text="Değerli Edad uyeleri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/edadFontColor"
+                android:gravity="center|left"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <com.example.sercangok.edad.view.TextView300
+            android:text="YÖNETİM KURULU"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:background="@color/edadmaincolor"
+            android:gravity="center" />
+
+        <ProgressBar
+            android:id="@+id/prgYonetimKurulu"
+            android:layout_weight="4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <GridView
+            android:layout_marginTop="10dp"
+            android:id="@+id/grdYonetim"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:numColumns="3"
+            tools:listitem="@layout/cell_yonetimkurulu" />
+
+    </LinearLayout>
+</LinearLayout>

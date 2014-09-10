@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sercangok.edad">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <permission
+        android:name="com.example.sercangok.edad.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.example.sercangok.edad.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/launcher"
+        android:label="@string/app_name"
+        android:theme="@style/edadTheme">
+        <activity
+            android:name=".activity.SplashScreenActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.mainActivity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/edadTheme2"></activity>
+        <activity
+            android:name=".activity.KongreActivity"
+            android:label="@string/title_activity_kongre"></activity>
+        <activity
+            android:name=".activity.fragmentActivity.KongreFragmetnActivity"
+            android:label="@string/title_activity_kongre"></activity>
+        <activity
+            android:name=".activity.HakkimizdaActivity"
+            android:label="@string/title_activity_hakkimizda"></activity>
+        <activity
+            android:name=".activity.UyelikActivity"
+            android:label="@string/title_activity_uyelik"></activity>
+        <activity
+            android:name=".activity.EtkinlikActivity"
+            android:label="@string/title_activity_etkinlik"></activity>
+        <activity
+            android:name=".activity.IletisimActivity"
+            android:label="@string/title_activity_iletisim"></activity>
+        <activity
+            android:name=".activity.TemsilciliklerimizActivity"
+            android:label="@string/title_activity_temsilciliklerimiz"></activity>
+        <activity
+            android:name=".activity.IstGenelMerkezActivity"
+            android:label="@string/title_activity_ist_genel_merkez"></activity>
+
+        <receiver
+            android:name=".service.receiver.GsmBroadCastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.example.sercangok.edad" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".service.GcmIntentService" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

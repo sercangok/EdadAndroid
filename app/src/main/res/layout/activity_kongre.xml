@@ -1,0 +1,415 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.sercangok.edad.activity.KongreActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick_KongreEkle">
+
+                <ImageView
+                    android:id="@+id/imgBanner"
+                    android:background="@drawable/takvimeekle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:background="@android:color/darker_gray"
+                    android:alpha="0.8"
+                    android:layout_gravity="bottom|center"
+                    android:text="TAKVIME EKLE"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:textSize="25sp"
+                    android:onClick="onClick_KongreEkle" />
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/lnrGerisayim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textSize="30sp">
+
+                <FrameLayout
+                    android:layout_margin="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Geri Sayim"
+                    android:background="@drawable/box"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="30sp"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/txtHafta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="30sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_margin="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Geri Sayim"
+                    android:background="@drawable/box"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textSize="30sp">
+
+                    <TextView
+                        android:id="@+id/txtGun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="6"
+                        android:gravity="center"
+                        android:textSize="30sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_margin="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Geri Sayim"
+                    android:padding="10dp"
+                    android:background="@drawable/box"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="30sp">
+
+                    <TextView
+                        android:id="@+id/txtSaat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="6"
+                        android:gravity="center"
+                        android:textSize="30sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_margin="10dp"
+                    android:layout_width="0dp"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="Geri Sayim"
+                    android:background="@drawable/box"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="30sp">
+
+                    <TextView
+                        android:id="@+id/txtDakika"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="30sp" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.example.sercangok.edad.view.TextView300
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Program"
+                    android:background="@color/edadmaincolor"
+                    android:gravity="center"
+                    android:textSize="25sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3.2"
+                    android:background="@color/orange">
+
+                    <LinearLayout
+                        android:id="@+id/ilkGun"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:weightSum="10"
+                        android:orientation="vertical">
+
+                        <com.example.sercangok.edad.view.TextView300
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="9"
+                            android:textSize="20sp"
+                            android:text="1.Gün" />
+
+                        <FrameLayout
+                            android:id="@+id/frmIndıcator"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:background="@android:color/white"
+                            android:layout_gravity="bottom" />
+                    </LinearLayout>
+
+
+                    <com.example.sercangok.edad.view.TextView300
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="0.1"
+                        android:textSize="20sp"
+                        android:text="|" />
+
+                    <LinearLayout
+                        android:id="@+id/ikinciGun"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:weightSum="10"
+                        android:orientation="vertical">
+
+                        <com.example.sercangok.edad.view.TextView300
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="9"
+                            android:textSize="20sp"
+                            android:text="2.Gün" />
+
+                        <FrameLayout
+                            android:id="@+id/frmIndıcatorIki"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:visibility="gone"
+                            android:background="@android:color/white"
+                            android:layout_gravity="bottom" />
+                    </LinearLayout>
+
+
+                    <com.example.sercangok.edad.view.TextView300
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:layout_weight="0.1"
+                        android:text="|" />
+
+                    <LinearLayout
+                        android:id="@+id/ucuncuGün"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:weightSum="10"
+                        android:orientation="vertical">
+
+                        <com.example.sercangok.edad.view.TextView300
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="9"
+                            android:textSize="20sp"
+                            android:text="3.Gün" />
+
+                        <FrameLayout
+                            android:id="@+id/frmIndıcatorSon"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:visibility="gone"
+                            android:layout_height="0dp"
+                            android:background="@android:color/white"
+                            android:layout_gravity="bottom" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.example.sercangok.edad.view.ExpandableHeightGridView
+                    android:id="@+id/lstProgram"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:dividerHeight="2dp"
+                    android:numColumns="1"
+                    android:divider="@android:color/white"
+                    tools:listitem="@layout/row_program" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.example.sercangok.edad.view.TextView300
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Sosyal Program"
+                    android:background="@color/edadmaincolor"
+                    android:gravity="center"
+                    android:textSize="25sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2.1"
+                    android:background="@color/orange"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/kokteyl"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:weightSum="10"
+                        android:orientation="vertical">
+
+                        <com.example.sercangok.edad.view.TextView300
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="9"
+                            android:textSize="20sp"
+                            android:text="Açılış Kokteyli" />
+
+                        <FrameLayout
+                            android:id="@+id/frmIndıcatorKokteyl"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:background="@android:color/white"
+                            android:layout_gravity="bottom" />
+                    </LinearLayout>
+
+
+                    <com.example.sercangok.edad.view.TextView300
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="0.1"
+                        android:textSize="20sp"
+                        android:text="|" />
+
+                    <LinearLayout
+                        android:id="@+id/galaYemegi"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:weightSum="10"
+                        android:orientation="vertical">
+
+                        <com.example.sercangok.edad.view.TextView300
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="9"
+                            android:textSize="20sp"
+                            android:text="Gala Yemeği" />
+
+                        <FrameLayout
+                            android:id="@+id/frmIndıcatorGala"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:visibility="gone"
+                            android:background="@android:color/white"
+                            android:layout_gravity="bottom" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lstSosyal"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/sosyaltakvim"
+                        android:layout_marginBottom="5dp" />
+
+                    <com.example.sercangok.edad.view.TextView300
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Gala Yemegi"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="@color/edadFontColor"
+                        android:layout_marginBottom="10dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/sosyalzaman"
+                        android:layout_marginBottom="5dp" />
+
+                    <com.example.sercangok.edad.view.TextView300
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="18:00-19:00"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="@color/edadFontColor"
+                        android:layout_marginBottom="10dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/sosyalyer"
+                        android:layout_marginBottom="5dp" />
+
+                    <com.example.sercangok.edad.view.TextView300
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Grand Cevahir Otel No9 D5"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="@color/edadFontColor"
+                        android:layout_marginBottom="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="edadmaincolor">#004fa3</color>
+    <color name="orange">#d97e35</color>
+    <color name="green">#00a368</color>
+    <color name="selectedTransculent">#50ffffff</color>
+    <color name="edadBackground">#E6E6E6</color>
+    <color name="edadFontColor">#545454</color>
+    <color name="edadRedFontColor">#FF0000</color>
+</resources>

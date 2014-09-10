@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="konusmacilar">
+        <item>Nicole Arweiler</item>
+        <item>Wael Att</item>
+        <item>Stephane Browet</item>
+        <item>Marco Degidi</item>
+        <item>Daniel Edelhoff</item>
+        <item>Gerhard Iglhaut</item>
+        <item>Arne Lund</item>
+        <item>IIja Mihatovic</item>
+        <item>Paulo Monteiro</item>
+        <item>Axel Mory</item>
+        <item>Michael Müller</item>
+        <item>Selim Pamuk</item>
+        <item>Joseph Sabbagh</item>
+        <item>Florin Stoboran</item>
+    </array>
+</resources>

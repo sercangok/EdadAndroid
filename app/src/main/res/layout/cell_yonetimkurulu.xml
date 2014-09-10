@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="30dp">
+
+    <FrameLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="@drawable/circle">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:src="@drawable/browet"
+            app:border_color="@color/edadmaincolor"
+            app:border_width="1dp" />
+
+    </FrameLayout>
+
+
+    <com.example.sercangok.edad.view.TextView500
+        android:id="@+id/txtPozisyon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/edadFontColor"
+        android:text="Baskan"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="1dp"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:gravity="center" />
+
+    <com.example.sercangok.edad.view.TextView300
+        android:id="@+id/txtAdSoyad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/edadFontColor"
+        android:text="Dr.Selim Pamuk"
+        android:layout_margin="1dp"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="12dp" />
+</LinearLayout>

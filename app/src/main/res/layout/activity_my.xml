@@ -1,0 +1,259 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MyActivity"
+    android:layout_marginTop="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="0dp">
+
+        <ProgressBar
+            android:id="@+id/prgKongre"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:layout_marginTop="5dp"
+            android:id="@+id/frmKongre"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/selected"
+            android:onClick="onClick_Kongre">
+
+
+            <ImageView
+                android:padding="5dp"
+                android:id="@+id/imgKongre"
+                android:layout_width="360dp"
+                android:layout_height="110dp"
+                android:scaleType="fitXY" />
+
+            <com.example.sercangok.edad.view.TextView700
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:text="Kongre"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_marginTop="5dp"
+            android:id="@+id/frmHakkimizda"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/selected"
+            android:onClick="onClick_Hakkimizda">
+
+
+            <ImageView
+                android:id="@+id/imgHakkimizda"
+                android:padding="5dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="fitXY" />
+
+            <com.example.sercangok.edad.view.TextView500
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Hakkımızda"
+                android:layout_gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="10"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop"
+                android:onClick="onClick_Kongre" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_marginTop="5dp"
+            android:id="@+id/frmUyelik"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/selected"
+            android:onClick="onClick_Uyelik">
+
+            <ImageView
+                android:id="@+id/imgUyelik"
+                android:padding="5dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="fitXY" />
+
+            <com.example.sercangok.edad.view.TextView500
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Üyelik"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="10"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_marginTop="5dp"
+            android:id="@+id/frmEtkinlik"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/selected"
+            android:onClick="onClick_Etkinliklerimiz">
+
+            <ImageView
+                android:id="@+id/imgEtkinliklerimiz"
+                android:padding="5dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="fitXY" />
+
+            <com.example.sercangok.edad.view.TextView500
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Etkinlikler"
+                android:layout_gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="10"
+                android:gravity="center"
+                android:layout_width="match_parent" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_marginTop="5dp"
+            android:id="@+id/frmIletisim"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/selected"
+            android:onClick="onClick_Iletişim">
+
+            <ImageView
+                android:id="@+id/imgIletisim"
+                android:padding="5dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="fitXY" />
+
+            <com.example.sercangok.edad.view.TextView500
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="İletişim"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="10"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+
+        <ImageView
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ipana" />
+
+        <ImageView
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/nobel" />
+
+        <ImageView
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/espe" />
+
+        <ImageView
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/sirona"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/botiss" />
+    </TableRow>
+
+    <FrameLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <ImageView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:src="@drawable/altbanner"
+            android:scaleType="fitXY"
+            android:onClick="onClick_KayitOl" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <com.example.sercangok.edad.view.TextView700
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Kongremize "
+                android:textSize="16sp"
+                android:textColor="@android:color/white" />
+
+            <com.example.sercangok.edad.view.TextView700
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="kayıt "
+                android:textSize="16sp"
+                android:textColor="@color/edadRedFontColor" />
+
+            <com.example.sercangok.edad.view.TextView700
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="için tıklayın"
+                android:textSize="16sp"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

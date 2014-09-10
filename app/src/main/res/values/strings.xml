@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Edad</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_kongre">Kongre</string>
+    <string name="title_activity_hakkimizda">Hakkımızda</string>
+    <string name="title_activity_uyelik">Üyelik</string>
+    <string name="title_activity_etkinlik">Etkinlik</string>
+    <string name="title_activity_iletisim">İletişim</string>
+    <string name="title_activity_temsilciliklerimiz">Temsilciliklerimiz</string>
+    <string name="title_activity_ist_genel_merkez">Istanbul Genel Merkez</string>
+    <string name="title_activity_uye">Uyelik</string>
+
+    <string name="uyelikSartlari">Dört adet EDAD bilimsel toplantısına katılmışsanız(Kongre,sempozyum,seminerler), ilgili belgeleri gönderiniz.
+ Klinik estetik uygulamalar ile ilgili beş adet vakanın önceki ve sonraki fotoğraflarını gönderiniz
+Bir adet üniversiteden bilimsel teziniz var ise, örneğini EDAD kütüphanesinde saklanmak üzere gönderiniz.
+Üç adet tebliğiniz var ise, birer özetini EDAD kütüphanesinde saklanmak üzere gönderiniz.</string>
+    <string name="uyelikAvantajlari">Akşam yemekli seminerlere ücretsiz katılım
+Quintessence Türkçe dergisi yıl boyunca aboneliği
+EDAD üyelerine özel hazırlanan tam günlük çok özel seminerler
+EDAD Uluslararası kongresinde indirim
+EDAD Uluslararası kongresinde VİP bölümde ağırlanma ve yalnız üyelere dönük etkinlikler
+Ifed üyesi kongrelerde üye statüsünde avantajlı katılım
+Sene içerisindeki sosyal etkinliklerden ücretsiz faydalanmak</string>
+
+    <string name="edadLink">edad.org.tr</string>
+
+</resources>

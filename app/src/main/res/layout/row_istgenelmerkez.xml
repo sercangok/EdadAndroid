@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border"
+    android:layout_margin="20dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/borderleftright"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp"
+            android:weightSum="7">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/profil"
+                    android:layout_weight="1"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="6"
+                android:orientation="vertical">
+
+                <com.example.sercangok.edad.view.TextView500
+                    android:id="@+id/txtUnvan"
+                    android:textColor="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center|left|bottom" />
+
+                <com.example.sercangok.edad.view.TextView300
+                    android:id="@+id/txtIsım"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center|left|top" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp"
+            android:weightSum="7">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgAdress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/yer"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+
+            <com.example.sercangok.edad.view.TextView300
+                android:id="@+id/txtAdress"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textSize="14sp"
+                android:textColor="@color/edadFontColor"
+                android:layout_weight="6"
+                android:layout_gravity="center"
+                android:gravity="center|left"
+                android:layout_marginRight="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp"
+            android:weightSum="7">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgTel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cep"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+
+            <com.example.sercangok.edad.view.TextView300
+                android:id="@+id/txtTel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textSize="14sp"
+                android:textColor="@color/edadFontColor"
+                android:layout_weight="6"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:gravity="center|left" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp"
+            android:weightSum="7">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgEvTel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/phone"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+
+            <com.example.sercangok.edad.view.TextView300
+                android:id="@+id/txtEvTel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textSize="14sp"
+                android:textColor="@color/edadFontColor"
+                android:layout_weight="6"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:gravity="center|left" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7"
+            android:layout_marginBottom="15dp">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgMail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/mail"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+
+            <com.example.sercangok.edad.view.TextView300
+                android:id="@+id/txtMail"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textSize="14sp"
+                android:textColor="@color/edadFontColor"
+                android:layout_weight="6"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:gravity="center|left" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

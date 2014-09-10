@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context="com.example.sercangok.edad.activity.EtkinlikActivity">
+
+    <ProgressBar
+        android:id="@+id/prgEtkinlik"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/lstKongre"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:headerDividersEnabled="true"
+        tools:listitem="@layout/row_etkinliklerimiz"
+        android:divider="@color/edadBackground"
+        android:dividerHeight="10dp" />
+</LinearLayout>

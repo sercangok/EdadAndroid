@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    tools:context="com.example.sercangok.edad.activity.IletisimActivity">
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="5dp"
+        android:background="@drawable/selected"
+        android:onClick="onClick_IstGenelMerkez">
+
+        <FrameLayout
+            android:layout_margin="5dp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/logoiletisim" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/genelmerkez" />
+        </FrameLayout>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="5dp"
+        android:background="@drawable/selected"
+        android:onClick="onClick_Temsilciliklerimiz">
+
+        <FrameLayout
+            android:layout_margin="5dp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/logoiletisim" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/temsilcilikler" />
+        </FrameLayout>
+    </TableRow>
+
+</LinearLayout>
