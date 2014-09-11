@@ -7,7 +7,7 @@
     <string name="title_activity_kongre">Kongre</string>
     <string name="title_activity_hakkimizda">Hakkımızda</string>
     <string name="title_activity_uyelik">Üyelik</string>
-    <string name="title_activity_etkinlik">Etkinlik</string>
+    <string name="title_activity_etkinlik">Etkinliklerimiz</string>
     <string name="title_activity_iletisim">İletişim</string>
     <string name="title_activity_temsilciliklerimiz">Temsilciliklerimiz</string>
     <string name="title_activity_ist_genel_merkez">Istanbul Genel Merkez</string>
@@ -23,7 +23,13 @@ EDAD üyelerine özel hazırlanan tam günlük çok özel seminerler
 EDAD Uluslararası kongresinde indirim
 EDAD Uluslararası kongresinde VİP bölümde ağırlanma ve yalnız üyelere dönük etkinlikler
 Ifed üyesi kongrelerde üye statüsünde avantajlı katılım
-Sene içerisindeki sosyal etkinliklerden ücretsiz faydalanmak</string>
+Sene içerisindeki sosyal etkinliklerden ücretsiz faydalanmak
+        EDAD üyelerine özel hazırlanan tam günlük çok özel seminerler
+EDAD Uluslararası kongresinde indirim
+EDAD Uluslararası kongresinde VİP bölümde ağırlanma ve yalnız üyelere dönük etkinlikler
+Ifed üyesi kongrelerde üye statüsünde avantajlı katılım
+Sene içerisindeki sosyal etkinliklerden ücretsiz faydalanmak
+    </string>
 
     <string name="edadLink">edad.org.tr</string>
 

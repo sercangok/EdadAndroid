@@ -22,12 +22,12 @@
         <com.example.sercangok.edad.view.TextView300
             android:id="@+id/txtAcıklama"
             android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:textColor="@color/edadFontColor"
             android:text="10:00"
             android:textSize="15sp"
             android:layout_weight="3"
-            android:gravity="center" />
+            android:gravity="center|left" />
 
         <FrameLayout
             android:layout_margin="1dp"

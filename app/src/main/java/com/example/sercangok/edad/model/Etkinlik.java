@@ -1,6 +1,9 @@
 package com.example.sercangok.edad.model;
 
 import java.sql.Date;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 /**
  * Created by sercangok on 27/08/14.
@@ -22,6 +25,8 @@ public class Etkinlik {
     private String lat;
     @SuppressWarnings("lon")
     private String lon;
+    @SuppressWarnings("kategoriismi")
+    private String kategoriismi;
 
     public String getLon() {
         return lon;
@@ -86,5 +91,13 @@ public class Etkinlik {
 
     public void setYer(String yer) {
         this.yer = yer;
+    }
+
+    public String getKategoriismi() {
+        return kategoriismi;
+    }
+
+    public void setKategoriismi(String kategoriismi) {
+        this.kategoriismi = kategoriismi;
     }
 }

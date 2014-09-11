@@ -188,46 +188,45 @@
     <TableRow
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:padding="5dp"
-        android:layout_margin="5dp"
+        android:gravity="center"
         android:layout_width="match_parent">
 
 
         <ImageView
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:src="@drawable/ipana" />
 
         <ImageView
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:src="@drawable/nobel" />
 
         <ImageView
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:src="@drawable/espe" />
 
         <ImageView
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:src="@drawable/sirona"
             android:layout_gravity="center" />
 
         <ImageView
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"

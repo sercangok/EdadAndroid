@@ -97,6 +97,7 @@
                 android:textColor="@color/edadFontColor"
                 android:layout_weight="6"
                 android:layout_gravity="center"
+                android:lineSpacingMultiplier="1.2"
                 android:gravity="center|left"
                 android:layout_marginRight="10dp" />
         </LinearLayout>

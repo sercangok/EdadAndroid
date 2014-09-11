@@ -15,6 +15,7 @@ import com.example.sercangok.edad.R;
 import com.example.sercangok.edad.model.Etkinlik;
 import com.example.sercangok.edad.util.CalenderUtil;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 /**
@@ -52,9 +53,10 @@ public class EtkinlikAdapter extends ArrayAdapter<Etkinlik> {
         imgPin = (ImageButton) row.findViewById(R.id.imgPin);
         frmTakvimeEkle = (FrameLayout) row.findViewById(R.id.frmTakvimeEkle);
         txtAd.setText(getItem(position).getIsim());
-        txtTarih.setText(getItem(position).getTarih().toString());
+        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("dd MM yyyy");
+        txtTarih.setText(simpleDateFormat.format(getItem(position).getTarih()));
         txtAdres.setText(getItem(position).getYer());
-        txtKategori.setText(getKategoriName(getItem(position).getKategoriid()));
+        txtKategori.setText(getItem(position).getKategoriismi());
 
         imgPin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,31 +78,16 @@ public class EtkinlikAdapter extends ArrayAdapter<Etkinlik> {
 
         switch (getItem(position).getKategoriid()) {
             case 1:
-                row.setBackground(getContext().getResources().getDrawable(R.drawable.borderblue));
+                row.setBackgroundResource(R.drawable.borderblue);
                 return row;
             case 2:
-                row.setBackground(getContext().getResources().getDrawable(R.drawable.bordergreen));
+                row.setBackgroundResource(R.drawable.bordergreen);
                 return row;
             case 3:
-                row.setBackground(getContext().getResources().getDrawable(R.drawable.borderorange));
+                row.setBackgroundResource(R.drawable.borderorange);
                 return row;
             default:
                 return row;
-        }
-    }
-
-    private String getKategoriName(int kategoriid) {
-        switch (kategoriid) {
-            case 0:
-                return "KONGRE";
-            case 1:
-                return "SEMPOZYUM";
-            case 2:
-                return "SEMİNER";
-            case 3:
-                return "KURS";
-            default:
-                return "HATA!";
         }
     }
 }

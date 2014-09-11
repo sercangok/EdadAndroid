@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:weightSum="4"
         android:layout_margin="10dp">
 
         <com.example.sercangok.edad.view.TextView500
@@ -18,7 +19,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="16sp"
-            android:layout_weight="2"
+            android:layout_weight="2.2"
             android:textColor="@android:color/white"
             android:layout_gravity="center"
             android:gravity="center|left" />
@@ -26,14 +27,14 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="1.8"
             android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/imgPin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/pinbutton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/pinbuttondrawable"
                 android:layout_marginRight="10dp"
                 android:layout_gravity="center" />
 
@@ -41,18 +42,18 @@
                 android:id="@+id/frmTakvimeEkle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/takvimbutton"
+                android:background="@drawable/takvimbuttondrawable"
                 android:layout_gravity="center">
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/takvimbutton"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/takvimbuttondrawable"
                     android:layout_gravity="center" />
 
                 <com.example.sercangok.edad.view.TextView500
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
                     android:layout_gravity="center"
                     android:textSize="12sp"
@@ -142,7 +143,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/etkinlikadres"
-                android:layout_gravity="center" />
+                android:layout_gravity="center|top" />
         </FrameLayout>
 
         <com.example.sercangok.edad.view.TextView300
@@ -153,6 +154,7 @@
             android:textColor="@android:color/white"
             android:layout_weight="6"
             android:layout_gravity="center"
+            android:lineSpacingMultiplier="1.2"
             android:gravity="center|left" />
     </LinearLayout>
 </LinearLayout>

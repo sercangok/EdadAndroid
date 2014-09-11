@@ -54,15 +54,14 @@
                 android:textSize="30sp">
 
                 <FrameLayout
-                    android:layout_margin="10dp"
+                    android:layout_margin="20dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Geri Sayim"
                     android:background="@drawable/box"
-                    android:layout_weight="1"
+                    android:layout_weight="0.7"
                     android:gravity="center"
-                    android:textSize="30sp"
-                    android:padding="10dp">
+                    android:textSize="30sp">
 
                     <TextView
                         android:id="@+id/txtHafta"
@@ -71,7 +70,7 @@
                         android:text="6"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:textSize="30sp" />
+                        android:textSize="24sp" />
                 </FrameLayout>
 
                 <FrameLayout
@@ -80,9 +79,8 @@
                     android:layout_height="wrap_content"
                     android:text="Geri Sayim"
                     android:background="@drawable/box"
-                    android:layout_weight="1"
+                    android:layout_weight="0.7"
                     android:gravity="center"
-                    android:padding="10dp"
                     android:textSize="30sp">
 
                     <TextView
@@ -92,7 +90,7 @@
                         android:layout_gravity="center"
                         android:text="6"
                         android:gravity="center"
-                        android:textSize="30sp" />
+                        android:textSize="24sp" />
                 </FrameLayout>
 
                 <FrameLayout
@@ -100,9 +98,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Geri Sayim"
-                    android:padding="10dp"
                     android:background="@drawable/box"
-                    android:layout_weight="1"
+                    android:layout_weight="0.7"
                     android:gravity="center"
                     android:textSize="30sp">
 
@@ -113,17 +110,16 @@
                         android:layout_gravity="center"
                         android:text="6"
                         android:gravity="center"
-                        android:textSize="30sp" />
+                        android:textSize="24sp" />
                 </FrameLayout>
 
                 <FrameLayout
                     android:layout_margin="10dp"
                     android:layout_width="0dp"
-                    android:padding="10dp"
                     android:layout_height="wrap_content"
                     android:text="Geri Sayim"
                     android:background="@drawable/box"
-                    android:layout_weight="1"
+                    android:layout_weight="0.7"
                     android:gravity="center"
                     android:textSize="30sp">
 
@@ -134,7 +130,7 @@
                         android:text="6"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:textSize="30sp" />
+                        android:textSize="24sp" />
                 </FrameLayout>
             </LinearLayout>
 

@@ -99,6 +99,7 @@
                 android:textColor="@color/edadFontColor"
                 android:layout_weight="6"
                 android:layout_marginRight="5dp"
+                android:lineSpacingMultiplier="1.2"
                 android:layout_gravity="center"
                 android:gravity="center|left" />
         </LinearLayout>
