@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.sercangok.edad.R;
@@ -32,6 +33,7 @@ public class IstGenelMerkezAdapter extends ArrayAdapter<IstGenelMerkez> {
     public ImageView imgTel;
     public ImageView imgEvtel;
     public ImageView imgMail;
+    private LinearLayout lnrTelefon;
 
     public IstGenelMerkezAdapter(Context context, int resource, List<IstGenelMerkez> objects) {
         super(context, resource, objects);
@@ -52,12 +54,15 @@ public class IstGenelMerkezAdapter extends ArrayAdapter<IstGenelMerkez> {
         imgTel = (ImageView) row.findViewById(R.id.imgTel);
         imgEvtel = (ImageView) row.findViewById(R.id.imgEvTel);
         imgMail = (ImageView) row.findViewById(R.id.imgMail);
-
+        lnrTelefon = (LinearLayout) row.findViewById(R.id.lnrTelefon);
 
         txtIsım.setText(getItem(position).getIsim());
         txtUnvan.setText(getItem(position).getUnvan());
         txtAdres.setText(getItem(position).getAdres());
-        txtTel.setText(getItem(position).getGsm() != "" ? getItem(position).getGsm() : "--");
+        if (getItem(position).getGsm() != "")
+            txtTel.setText(getItem(position).getGsm());
+        else
+            lnrTelefon.setVisibility(View.GONE);
         txtEvtel.setText(getItem(position).getTel());
         txtMail.setText(getItem(position).getEmail());
         return row;

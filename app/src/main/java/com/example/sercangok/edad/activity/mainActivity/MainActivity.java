@@ -46,12 +46,15 @@ import com.squareup.picasso.Picasso;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -78,8 +81,8 @@ public class MainActivity extends Activity implements ReadyToSetView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
         context = (Context) this;
-        //storeRegistrationId(this, "");
-        // register();
+        storeRegistrationId(this, "");
+        register();
         init();
         setBitmaps();
         checkForKongre();
@@ -87,7 +90,7 @@ public class MainActivity extends Activity implements ReadyToSetView {
 
     private void setBitmaps() {
         Bitmap icon = BitmapFactory.decodeResource(context.getResources(),
-                R.drawable.kongrepic);
+                R.drawable.noconnection);
         ((ImageView) findViewById(R.id.imgKongre)).setImageBitmap(getRoundedCornerBitmap(icon, 10));
         icon = BitmapFactory.decodeResource(context.getResources(),
                 R.drawable.hakkimizdapic);
@@ -240,8 +243,10 @@ public class MainActivity extends Activity implements ReadyToSetView {
         DefaultHttpClient client = new DefaultHttpClient();
         HttpPost post = new HttpPost(url);
         try {
-            StringEntity stringEntity = new StringEntity("anroidkey=+" + regid + "+&devicetype=2");
-            post.setEntity(stringEntity);
+            List<NameValuePair> values = new ArrayList<NameValuePair>();
+            values.add(new BasicNameValuePair("key", regid));
+            values.add(new BasicNameValuePair("devicetype", "2"));
+            post.setEntity(new UrlEncodedFormEntity(values));
             final HttpResponse response = client.execute(post);
             if (response.getStatusLine().getStatusCode() == 200) {
                 final HttpEntity entity = response.getEntity();
@@ -249,19 +254,22 @@ public class MainActivity extends Activity implements ReadyToSetView {
                     @Override
                     public void run() {
                         try {
-                            Toast.makeText(context, EntityUtils.toString(entity), Toast.LENGTH_LONG).show();
+                            Log.e("log", EntityUtils.toString(entity));
+                            // Toast.makeText(MainActivity.this.getApplicationContext(), EntityUtils.toString(entity), Toast.LENGTH_LONG).show();
                         } catch (IOException e) {
-                            Toast.makeText(context, e.toString(), Toast.LENGTH_LONG).show();
+                            Log.e("log", e.toString());
+                            //Toast.makeText(MainActivity.this.getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();
                         }
                     }
                 });
             }
 
         } catch (final Exception e) {
+            Log.e("log", e.toString());
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    Toast.makeText(context, e.toString(), Toast.LENGTH_LONG).show();
+                    // Toast.makeText(MainActivity.this.getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();
                 }
             });
         }
@@ -291,6 +299,8 @@ public class MainActivity extends Activity implements ReadyToSetView {
 
     private void checkForKongre() {
         prgKongre.setVisibility(View.VISIBLE);
+        //((ImageView) findViewById(R.id.imgKongre)).setVisibility(View.GONE);
+        // ((FrameLayout) findViewById(R.id.frmKongre)).setBackgroundResource(android.R.color.transparent);
         new OzelEdadKongreTask(this).execute();
     }
 
@@ -370,6 +380,8 @@ public class MainActivity extends Activity implements ReadyToSetView {
     public void readToSetBitmap(Bitmap object) {
         ((ImageView) findViewById(R.id.imgKongre)).setImageBitmap(getRoundedCornerBitmap(object, 10));
         prgKongre.setVisibility(View.GONE);
+        // ((ImageView) findViewById(R.id.imgKongre)).setVisibility(View.VISIBLE);
+        //((FrameLayout) findViewById(R.id.frmKongre)).setBackground(getResources().getDrawable(R.drawable.border));
     }
 
     @Override
