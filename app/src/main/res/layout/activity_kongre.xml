@@ -180,10 +180,10 @@
                 <com.example.sercangok.edad.view.TextView300
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:text="Program"
+                    android:text="PROGRAM"
                     android:background="@color/edadmaincolor"
                     android:gravity="center"
-                    android:textSize="25sp" />
+                    android:textSize="22sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -309,10 +309,10 @@
                 <com.example.sercangok.edad.view.TextView300
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:text="Sosyal Program"
+                    android:text="SOSYAL PROGRAM"
                     android:background="@color/edadmaincolor"
                     android:gravity="center"
-                    android:textSize="25sp" />
+                    android:textSize="22sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
