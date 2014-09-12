@@ -16,6 +16,7 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -39,6 +40,7 @@ import com.example.sercangok.edad.model.IstGenelMerkez;
 import com.example.sercangok.edad.model.Temsilcilik;
 import com.example.sercangok.edad.model.YonetimKurulu;
 import com.example.sercangok.edad.tasks.OzelEdadKongreTask;
+import com.example.sercangok.edad.util.TelFunction;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
@@ -75,13 +77,13 @@ public class MainActivity extends Activity implements ReadyToSetView {
     static final String TAG = "GCMDemo";
     String regid;
     Context context;
+    Boolean kongreFlag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
         context = (Context) this;
-        storeRegistrationId(this, "");
         register();
         init();
         setBitmaps();
@@ -220,7 +222,7 @@ public class MainActivity extends Activity implements ReadyToSetView {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(context, finalMsg, Toast.LENGTH_LONG).show();
+                        //Toast.makeText(context, finalMsg, Toast.LENGTH_LONG).show();
                     }
                 });
                 return null;
@@ -330,17 +332,19 @@ public class MainActivity extends Activity implements ReadyToSetView {
     }
 
     public void onClick_Kongre(View v) {
-        startActivity(new Intent(this, KongreFragmetnActivity.class));
+        if (kongreFlag)
+            startActivity(new Intent(this, KongreFragmetnActivity.class));
     }
 
     public void onClick_KayitOl(View v) {
-        Intent intent = new Intent(Intent.ACTION_SEND);
+        /*Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/html");
         intent.putExtra(Intent.EXTRA_EMAIL,
                 new String[]{"edad@mail.com"});
         intent.putExtra(Intent.EXTRA_SUBJECT, "Edad Uyelik");
         intent.putExtra(Intent.EXTRA_TEXT, "Buraya Adınızı ve Soyadınızı giriniz.!");
-        startActivity(Intent.createChooser(intent, "Send Email"));
+        startActivity(Intent.createChooser(intent, "Send Email"));*/
+        startActivity(TelFunction.getInstance("02122174707").call());
     }
 
     @Override
@@ -378,8 +382,10 @@ public class MainActivity extends Activity implements ReadyToSetView {
 
     @Override
     public void readToSetBitmap(Bitmap object) {
+        kongreFlag = false;
         ((ImageView) findViewById(R.id.imgKongre)).setImageBitmap(getRoundedCornerBitmap(object, 10));
         prgKongre.setVisibility(View.GONE);
+        if (object != null) kongreFlag = true;
         // ((ImageView) findViewById(R.id.imgKongre)).setVisibility(View.VISIBLE);
         //((FrameLayout) findViewById(R.id.frmKongre)).setBackground(getResources().getDrawable(R.drawable.border));
     }
@@ -402,7 +408,8 @@ public class MainActivity extends Activity implements ReadyToSetView {
         switch (item.getItemId()) {
             case R.id.mapAction:
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                //intent.setData(geoLocation);
+                Uri geoLocation = Uri.parse("geo:41.048680,28.986519");
+                intent.setData(geoLocation);
                 if (intent.resolveActivity(getPackageManager()) != null) {
                     startActivity(intent);
                 }

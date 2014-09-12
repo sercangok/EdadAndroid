@@ -7,4 +7,5 @@
     <color name="edadBackground">#E6E6E6</color>
     <color name="edadFontColor">#545454</color>
     <color name="edadRedFontColor">#FF0000</color>
+    <color name="blacktransparent">#70FFFFFF</color>
 </resources>

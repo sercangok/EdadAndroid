@@ -30,6 +30,7 @@
         <item name="android:background">#2E509F</item>
         <item name="android:titleTextStyle">@style/textStyle</item>
         <item name="android:displayOptions">showHome|useLogo</item>
+        <item name="android:logo">@drawable/logo</item>
     </style>
 
     <style name="edadActionBar2" parent="android:Widget.Holo.Light.ActionBar">

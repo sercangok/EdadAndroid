@@ -2,6 +2,7 @@ package com.example.sercangok.edad.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,7 +54,7 @@ public class EtkinlikAdapter extends ArrayAdapter<Etkinlik> {
         imgPin = (ImageButton) row.findViewById(R.id.imgPin);
         frmTakvimeEkle = (FrameLayout) row.findViewById(R.id.frmTakvimeEkle);
         txtAd.setText(getItem(position).getIsim());
-        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("dd MM yyyy");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
         txtTarih.setText(simpleDateFormat.format(getItem(position).getTarih()));
         txtAdres.setText(getItem(position).getYer());
         txtKategori.setText(getItem(position).getKategoriismi());
@@ -62,7 +63,8 @@ public class EtkinlikAdapter extends ArrayAdapter<Etkinlik> {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                //intent.setData(geoLocation);
+                Uri geoLocation = Uri.parse("geo:" + getItem(position).getLat() + "," + getItem(position).getLon());
+                intent.setData(geoLocation);
                 if (intent.resolveActivity(getContext().getPackageManager()) != null) {
                     getContext().startActivity(intent);
                 }
@@ -78,13 +80,13 @@ public class EtkinlikAdapter extends ArrayAdapter<Etkinlik> {
 
         switch (getItem(position).getKategoriid()) {
             case 1:
-                row.setBackgroundResource(R.drawable.borderblue);
+                row.setBackgroundResource(R.drawable.borderorange);
                 return row;
             case 2:
                 row.setBackgroundResource(R.drawable.bordergreen);
                 return row;
             case 3:
-                row.setBackgroundResource(R.drawable.borderorange);
+                row.setBackgroundResource(R.drawable.borderblue);
                 return row;
             default:
                 return row;

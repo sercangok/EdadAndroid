@@ -3,6 +3,7 @@ package com.example.sercangok.edad.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -126,7 +127,8 @@ public class EtkinlikActivity extends Activity implements ReadyToSetView, Progra
                 return true;
             case R.id.mapAction:
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                //intent.setData(geoLocation);
+                Uri geoLocation = Uri.parse("geo:41.048680,28.986519");
+                intent.setData(geoLocation);
                 if (intent.resolveActivity(getPackageManager()) != null) {
                     startActivity(intent);
                 }

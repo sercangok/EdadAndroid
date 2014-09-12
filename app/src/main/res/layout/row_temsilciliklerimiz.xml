@@ -105,6 +105,9 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/lnrTel"
+            android:background="@drawable/selectediletesim"
+            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -140,6 +143,9 @@
 
 
         <LinearLayout
+            android:id="@+id/lnrEvTel"
+            android:background="@drawable/selectediletesim"
+            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -175,6 +181,9 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/lnrMail"
+            android:background="@drawable/selectediletesim"
+            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"

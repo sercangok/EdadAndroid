@@ -27,6 +27,7 @@ public class CalenderUtil {
     private long eventID;
     private List<Long> calenderIDList;
     public static ProgramAddedToCalender mListener;
+    private int remainderMinute = 30;
 
     public CalenderUtil(Context context) {
         this.context = context;
@@ -36,7 +37,7 @@ public class CalenderUtil {
         endTime.set(2014, Calendar.OCTOBER, 19, 15, 30);
         _beginTime = beginTime.getTimeInMillis();
         _endTime = endTime.getTimeInMillis();
-        setRemainder(addEventToCalender(getCalenders().get(0)));
+        setRemainderEdadKongre(addEventToCalender(getCalenders().get(0)));
     }
 
     public CalenderUtil(Context context, Program program) {
@@ -45,10 +46,25 @@ public class CalenderUtil {
         this.endTime = program.calendarBitis;
         _beginTime = beginTime.getTimeInMillis();
         _endTime = endTime.getTimeInMillis();
-        setRemainder(addEventToCalender(getCalenders().get(0), program));
+        if (program.saatlikEvent) {
+            remainderMinute = 10;
+            setRemainder(addEventToCalender(getCalenders().get(0), program));
+        } else
+            setRemainderEdadKongre(addEventToCalender(getCalenders().get(0), program));
     }
 
     public CalenderUtil(Context context, Etkinlik etkinlik) {
+        switch (etkinlik.getKategoriid()) {
+            case 1:
+                remainderMinute = 3 * 60;
+                break;
+            case 2:
+                remainderMinute = 3 * 60;
+                break;
+            case 3:
+                remainderMinute = 24 * 60;
+                break;
+        }
         this.context = context;
         this.beginTime = Calendar.getInstance();
         this.endTime = Calendar.getInstance();
@@ -104,10 +120,11 @@ public class CalenderUtil {
         ContentValues values = new ContentValues();
         values.put(CalendarContract.Events.DTSTART, _beginTime);
         values.put(CalendarContract.Events.DTEND, _endTime);
-        values.put(CalendarContract.Events.TITLE, "EDAD KONGRE");
+        values.put(CalendarContract.Events.TITLE, etkinlik.getKategoriismi());
         values.put(CalendarContract.Events.DESCRIPTION, etkinlik.getIsim());
         values.put(CalendarContract.Events.CALENDAR_ID, calID);
         values.put(CalendarContract.Events.EVENT_TIMEZONE, "Turkey/Istanbul");
+        values.put(CalendarContract.Events.EVENT_LOCATION, etkinlik.getYer());
         Uri uri = cr.insert(CalendarContract.Events.CONTENT_URI, values);
         return Long.parseLong(uri.getLastPathSegment());
     }
@@ -131,12 +148,27 @@ public class CalenderUtil {
     public void setRemainder(long eventID) {
         ContentResolver cr = context.getContentResolver();
         ContentValues values = new ContentValues();
-        values.put(CalendarContract.Reminders.MINUTES, 30);
+        values.put(CalendarContract.Reminders.MINUTES, remainderMinute);
         values.put(CalendarContract.Reminders.EVENT_ID, eventID);
         values.put(CalendarContract.Reminders.METHOD, CalendarContract.Reminders.METHOD_ALERT);
         Uri uri = cr.insert(CalendarContract.Reminders.CONTENT_URI, values);
         mListener.readyToShowToast();
     }
 
+
+    private void setRemainderEdadKongre(Long eventID) {
+        for (int i = 1; i <= 3; i++) {
+            if (i == 1) remainderMinute = 3 * 24 * 60;
+            else if (i == 2) remainderMinute = 24 * 60;
+            else remainderMinute = 60;
+            ContentResolver cr = context.getContentResolver();
+            ContentValues values = new ContentValues();
+            values.put(CalendarContract.Reminders.MINUTES, remainderMinute);
+            values.put(CalendarContract.Reminders.EVENT_ID, eventID);
+            values.put(CalendarContract.Reminders.METHOD, CalendarContract.Reminders.METHOD_ALERT);
+            Uri uri = cr.insert(CalendarContract.Reminders.CONTENT_URI, values);
+        }
+        mListener.readyToShowToast();
+    }
 
 }

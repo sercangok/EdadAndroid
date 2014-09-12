@@ -80,10 +80,10 @@ public class KongreFragment extends Fragment implements View.OnClickListener, Pr
     public void updateSecond() {
         SEC = Programlar.programlar17EkimCuma.get(0).calendarBaslangic.getTime().getTime() - Calendar.getInstance().getTime().getTime();
         CountDown.getInstance(SEC / 1000);
-        txtHafta.setText((int) CountDown.leftWeek + " W");
-        txtGun.setText((int) CountDown.leftDay + " D");
-        txtSaat.setText((int) CountDown.leftHour + " H");
-        txtDk.setText((int) CountDown.leftMin + "M");
+        txtHafta.setText(String.valueOf((int) CountDown.leftWeek));
+        txtGun.setText(String.valueOf((int) CountDown.leftDay));
+        txtSaat.setText(String.valueOf((int) CountDown.leftHour));
+        txtDk.setText(String.valueOf((int) CountDown.leftMin));
     }
 
     Runnable geriSayim = new Runnable() {

@@ -50,88 +50,126 @@
                 android:orientation="horizontal"
                 android:gravity="center"
                 android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:textSize="30sp">
+                android:layout_marginRight="30dp">
 
-                <FrameLayout
+                <LinearLayout
                     android:layout_margin="20dp"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:text="Geri Sayim"
                     android:background="@drawable/box"
+                    android:orientation="vertical"
                     android:layout_weight="0.7"
-                    android:gravity="center"
-                    android:textSize="30sp">
+                    android:gravity="center">
 
-                    <TextView
+                    <com.example.sercangok.edad.view.TextView300
                         android:id="@+id/txtHafta"
+                        android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="6"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:textSize="24sp" />
-                </FrameLayout>
+                        android:textSize="20sp" />
 
-                <FrameLayout
+                    <com.example.sercangok.edad.view.TextView300
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hafta"
+                        android:layout_gravity="bottom|center"
+                        android:gravity="center"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_margin="10dp"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:text="Geri Sayim"
                     android:background="@drawable/box"
+                    android:orientation="vertical"
                     android:layout_weight="0.7"
                     android:gravity="center"
                     android:textSize="30sp">
 
-                    <TextView
+                    <com.example.sercangok.edad.view.TextView300
                         android:id="@+id/txtGun"
+                        android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="6"
                         android:gravity="center"
-                        android:textSize="24sp" />
-                </FrameLayout>
+                        android:textSize="20sp" />
 
-                <FrameLayout
+                    <com.example.sercangok.edad.view.TextView300
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Gün"
+                        android:gravity="center"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_margin="10dp"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:text="Geri Sayim"
                     android:background="@drawable/box"
                     android:layout_weight="0.7"
                     android:gravity="center"
-                    android:textSize="30sp">
+                    android:textSize="30sp"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/txtSaat"
+                        android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="6"
                         android:gravity="center"
-                        android:textSize="24sp" />
-                </FrameLayout>
+                        android:textSize="20sp" />
 
-                <FrameLayout
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Saat"
+                        android:gravity="center"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_margin="10dp"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:text="Geri Sayim"
                     android:background="@drawable/box"
                     android:layout_weight="0.7"
                     android:gravity="center"
-                    android:textSize="30sp">
+                    android:textSize="30sp"
+                    android:orientation="vertical">
 
-                    <TextView
+                    <com.example.sercangok.edad.view.TextView300
                         android:id="@+id/txtDakika"
+                        android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="6"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:textSize="24sp" />
-                </FrameLayout>
+                        android:textSize="20sp" />
+
+                    <com.example.sercangok.edad.view.TextView300
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dakika"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="15sp" />
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout

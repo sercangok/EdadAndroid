@@ -1,6 +1,7 @@
 package com.example.sercangok.edad.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.sercangok.edad.R;
 import com.example.sercangok.edad.model.IstGenelMerkez;
+import com.example.sercangok.edad.util.TelFunction;
 import com.example.sercangok.edad.view.TextView300;
 import com.example.sercangok.edad.view.TextView500;
 
@@ -42,7 +44,7 @@ public class IstGenelMerkezAdapter extends ArrayAdapter<IstGenelMerkez> {
 
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         row = inflater.inflate(R.layout.row_istgenelmerkez, null);
         txtIsım = (TextView300) row.findViewById(R.id.txtIsım);
         txtUnvan = (TextView500) row.findViewById(R.id.txtUnvan);
@@ -65,6 +67,27 @@ public class IstGenelMerkezAdapter extends ArrayAdapter<IstGenelMerkez> {
             lnrTelefon.setVisibility(View.GONE);
         txtEvtel.setText(getItem(position).getTel());
         txtMail.setText(getItem(position).getEmail());
+
+
+        ((LinearLayout) row.findViewById(R.id.lnrTelefon)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getContext().startActivity(TelFunction.getInstance(getItem(position).getGsm()).call());
+            }
+        });
+        ((LinearLayout) row.findViewById(R.id.lnrEvTel)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getContext().startActivity(TelFunction.getInstance(getItem(position).getTel()).call());
+            }
+        });
+        ((LinearLayout) row.findViewById(R.id.lnrMail)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getContext().startActivity(Intent.createChooser(TelFunction.getInstance(getItem(position).getEmail(), "", "").sendMail(), "Send Email"));
+            }
+        });
+
         return row;
     }
 

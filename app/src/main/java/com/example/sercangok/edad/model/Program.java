@@ -10,16 +10,31 @@ import java.util.Date;
 public class Program {
     public Calendar calendarBaslangic;
     public Calendar calendarBitis;
+    private String title;
     private String yapılcak;
+    public boolean saatlikEvent;
 
-    public Program(Calendar calendarBaslangic, Calendar calendarBitis, String yapılcak) {
+    public Program(Calendar calendarBaslangic, Calendar calendarBitis, String title, String yapılcak) {
         this.calendarBaslangic = calendarBaslangic;
         this.calendarBitis = calendarBitis;
         this.yapılcak = yapılcak;
+        this.title = title;
+        saatlikEvent = false;
+    }
+
+    public Program(Calendar calS, Calendar calF, String yapılcak) {
+        this.calendarBaslangic = calS;
+        this.calendarBitis = calF;
+        this.yapılcak = yapılcak;
+        saatlikEvent = false;
     }
 
     public String getYapılcak() {
         return yapılcak;
+    }
+
+    public String getTitle() {
+        return title;
     }
 
     @Override

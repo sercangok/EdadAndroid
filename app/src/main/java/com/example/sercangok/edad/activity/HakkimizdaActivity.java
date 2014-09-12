@@ -3,6 +3,7 @@ package com.example.sercangok.edad.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
@@ -48,6 +49,8 @@ public class HakkimizdaActivity extends Activity implements ReadyToSetView {
 
     private void init() {
         grdYonetim = (GridView) findViewById(R.id.grdYonetim);
+        grdYonetim.setClickable(false);
+        grdYonetim.setLongClickable(false);
         txtHakkimizda = (TextView) findViewById(R.id.txtHakkimizda);
         txtHakkimizda.setMovementMethod(new ScrollingMovementMethod());
         prgHakkimizda = (ProgressBar) findViewById(R.id.prgHakkimizda);
@@ -112,7 +115,8 @@ public class HakkimizdaActivity extends Activity implements ReadyToSetView {
                 return true;
             case R.id.mapAction:
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                //intent.setData(geoLocation);
+                Uri geoLocation = Uri.parse("geo:41.048680,28.986519");
+                intent.setData(geoLocation);
                 if (intent.resolveActivity(getPackageManager()) != null) {
                     startActivity(intent);
                 }

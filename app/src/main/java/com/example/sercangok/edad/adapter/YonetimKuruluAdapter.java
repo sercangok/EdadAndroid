@@ -37,4 +37,14 @@ public class YonetimKuruluAdapter extends ArrayAdapter<YonetimKurulu> {
         txtPozisyon.setText(getItem(position).getUnvan());
         return row;
     }
+
+    @Override
+    public boolean areAllItemsEnabled() {
+        return false;
+    }
+
+    @Override
+    public boolean isEnabled(int position) {
+        return false;
+    }
 }

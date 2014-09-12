@@ -1,6 +1,7 @@
 package com.example.sercangok.edad.activity.fragmentActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
@@ -39,7 +40,8 @@ public class KongreFragmetnActivity extends FragmentActivity {
                 return true;
             case R.id.mapAction:
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                //intent.setData(geoLocation);
+                Uri geoLocation = Uri.parse("geo:41.048680,28.986519");
+                intent.setData(geoLocation);
                 if (intent.resolveActivity(getPackageManager()) != null) {
                     startActivity(intent);
                 }

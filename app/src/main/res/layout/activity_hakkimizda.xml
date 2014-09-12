@@ -79,6 +79,7 @@
             android:layout_height="0dp"
             android:layout_weight="4"
             android:numColumns="3"
+            android:clickable="false"
             tools:listitem="@layout/cell_yonetimkurulu" />
 
     </LinearLayout>

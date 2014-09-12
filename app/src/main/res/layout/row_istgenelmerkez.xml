@@ -109,6 +109,8 @@
             android:layout_weight="1"
             android:orientation="horizontal"
             android:visibility="visible"
+            android:background="@drawable/selectediletesim"
+            android:clickable="true"
             android:layout_marginBottom="15dp"
             android:weightSum="7">
 
@@ -139,9 +141,12 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/lnrEvTel"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:background="@drawable/selectediletesim"
+            android:clickable="true"
             android:orientation="horizontal"
             android:layout_marginBottom="15dp"
             android:weightSum="7">
@@ -173,9 +178,12 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/lnrMail"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:background="@drawable/selectediletesim"
+            android:clickable="true"
             android:orientation="horizontal"
             android:weightSum="7"
             android:layout_marginBottom="15dp">
