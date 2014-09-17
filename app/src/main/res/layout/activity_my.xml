@@ -193,45 +193,55 @@
         android:layout_width="match_parent">
 
 
-        <ImageView
+        <ImageButton
             android:layout_marginRight="3dp"
             android:layout_marginLeft="3dp"
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:src="@drawable/ipana" />
+            android:src="@drawable/ipana"
+            android:background="@android:color/transparent"
+            android:onClick="onClick_Ipana" />
 
-        <ImageView
+        <ImageButton
             android:layout_marginRight="3dp"
             android:layout_marginLeft="3dp"
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:src="@drawable/nobel" />
+            android:src="@drawable/nobel"
+            android:background="@android:color/transparent"
+            android:onClick="onClick_Nobel" />
 
-        <ImageView
+        <ImageButton
             android:layout_marginRight="3dp"
             android:layout_marginLeft="3dp"
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:src="@drawable/espe" />
+            android:src="@drawable/espe"
+            android:background="@android:color/transparent"
+            android:onClick="onClick_Espe" />
 
-        <ImageView
+        <ImageButton
             android:layout_marginRight="3dp"
             android:layout_marginLeft="3dp"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:src="@drawable/sirona"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:onClick="onClick_Sirona" />
 
-        <ImageView
+        <ImageButton
             android:layout_marginRight="3dp"
             android:layout_marginLeft="3dp"
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:src="@drawable/botiss" />
+            android:src="@drawable/botiss"
+            android:background="@android:color/transparent"
+            android:onClick="onClick_Botis" />
     </TableRow>
 
     <FrameLayout
@@ -245,7 +255,8 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center"
-            android:padding="10dp">
+            android:padding="10dp"
+            android:onClick="onClick_KayitOl">
 
 
             <ImageView
@@ -253,7 +264,6 @@
                 android:layout_width="wrap_content"
                 android:src="@drawable/logo"
                 android:scaleType="fitXY"
-                android:onClick="onClick_KayitOl"
                 android:layout_marginRight="10dp" />
 
 

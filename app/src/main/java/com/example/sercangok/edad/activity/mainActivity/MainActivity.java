@@ -368,6 +368,35 @@ public class MainActivity extends Activity implements ReadyToSetView {
         startActivity(TelFunction.getInstance("02122174707").call());
     }
 
+    public void onClick_Ipana(View v) {
+        openWebPage("https://www.facebook.com");
+    }
+
+    public void onClick_Espe(View v) {
+        openWebPage("https://www.google.com");
+    }
+
+    public void onClick_Botis(View v) {
+        openWebPage("https://www.google.com");
+    }
+
+    public void onClick_Nobel(View v) {
+        openWebPage("https://www.google.com");
+    }
+
+    public void onClick_Sirona(View v) {
+        openWebPage("https://www.facebook.com");
+    }
+
+    public void openWebPage(String url) {
+        Uri webpage = Uri.parse(url);
+        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+        intent.setData(webpage);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
+
     @Override
     public void readyToSet(List<String> array) {
 
