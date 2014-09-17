@@ -30,12 +30,13 @@ public class IstGenelMerkezAdapter extends ArrayAdapter<IstGenelMerkez> {
     public TextView300 txtTel;
     public TextView300 txtEvtel;
     public TextView300 txtMail;
+    public TextView300 txtFax;
     public ImageView imgProfil;
     public ImageView imgAdres;
     public ImageView imgTel;
     public ImageView imgEvtel;
     public ImageView imgMail;
-    private LinearLayout lnrTelefon;
+    private LinearLayout lnrTelefon, lnrFax;
 
     public IstGenelMerkezAdapter(Context context, int resource, List<IstGenelMerkez> objects) {
         super(context, resource, objects);
@@ -52,11 +53,13 @@ public class IstGenelMerkezAdapter extends ArrayAdapter<IstGenelMerkez> {
         txtTel = (TextView300) row.findViewById(R.id.txtTel);
         txtEvtel = (TextView300) row.findViewById(R.id.txtEvTel);
         txtMail = (TextView300) row.findViewById(R.id.txtMail);
+        txtFax = (TextView300) row.findViewById(R.id.txtFax);
         imgAdres = (ImageView) row.findViewById(R.id.imgAdress);
         imgTel = (ImageView) row.findViewById(R.id.imgTel);
         imgEvtel = (ImageView) row.findViewById(R.id.imgEvTel);
         imgMail = (ImageView) row.findViewById(R.id.imgMail);
         lnrTelefon = (LinearLayout) row.findViewById(R.id.lnrTelefon);
+        lnrFax = (LinearLayout) row.findViewById(R.id.lnrFaks);
 
         txtIsım.setText(getItem(position).getIsim());
         txtUnvan.setText(getItem(position).getUnvan());
@@ -65,6 +68,10 @@ public class IstGenelMerkezAdapter extends ArrayAdapter<IstGenelMerkez> {
             txtTel.setText(getItem(position).getGsm());
         else
             lnrTelefon.setVisibility(View.GONE);
+        if (getItem(position).getFax() != "")
+            txtFax.setText(getItem(position).getFax());
+        else
+            lnrFax.setVisibility(View.GONE);
         txtEvtel.setText(getItem(position).getTel());
         txtMail.setText(getItem(position).getEmail());
 
@@ -87,7 +94,12 @@ public class IstGenelMerkezAdapter extends ArrayAdapter<IstGenelMerkez> {
                 getContext().startActivity(Intent.createChooser(TelFunction.getInstance(getItem(position).getEmail(), "", "").sendMail(), "Send Email"));
             }
         });
-
+        ((LinearLayout) row.findViewById(R.id.lnrFaks)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getContext().startActivity(TelFunction.getInstance(getItem(position).getFax()).call());
+            }
+        });
         return row;
     }
 

@@ -28,10 +28,12 @@ public class TemsilcilikAdapter extends ArrayAdapter<Temsilcilik> {
     public TextView txtTel;
     public TextView txtCep;
     public TextView txtMail;
+    public TextView txtFax;
     public ImageView imgProfil;
     public ImageView imgAdres;
     public ImageView imgTel;
     public ImageView imgMail;
+    private LinearLayout lnrFax;
 
 
     public TemsilcilikAdapter(Context context, int resource, List<Temsilcilik> objects) {
@@ -48,10 +50,11 @@ public class TemsilcilikAdapter extends ArrayAdapter<Temsilcilik> {
         txtTel = (TextView) row.findViewById(R.id.txtEvTel);
         txtCep = (TextView) row.findViewById(R.id.txtTel);
         txtMail = (TextView) row.findViewById(R.id.txtMail);
+        txtFax = (TextView) row.findViewById(R.id.txtFax);
         imgAdres = (ImageView) row.findViewById(R.id.imgAdress);
         imgTel = (ImageView) row.findViewById(R.id.imgTel);
         imgMail = (ImageView) row.findViewById(R.id.imgMail);
-
+        lnrFax = (LinearLayout) row.findViewById(R.id.lnrFaks);
 
         txtIsım.setText(getItem(position).getIsim());
         txtUnvan.setText(getItem(position).getTemsilciUnvan());
@@ -59,6 +62,11 @@ public class TemsilcilikAdapter extends ArrayAdapter<Temsilcilik> {
         txtTel.setText(getItem(position).getTel());
         txtCep.setText(getItem(position).getGsm() != "" ? getItem(position).getGsm() : "--");
         txtMail.setText(getItem(position).getEmail());
+
+        if (getItem(position).getFaks() != "")
+            txtFax.setText(getItem(position).getFaks());
+        else
+            lnrFax.setVisibility(View.GONE);
 
         ((LinearLayout) row.findViewById(R.id.lnrTel)).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,6 +84,12 @@ public class TemsilcilikAdapter extends ArrayAdapter<Temsilcilik> {
             @Override
             public void onClick(View view) {
                 getContext().startActivity(Intent.createChooser(TelFunction.getInstance(getItem(position).getEmail(), "", "").sendMail(), "Send Email"));
+            }
+        });
+        ((LinearLayout) row.findViewById(R.id.lnrFaks)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getContext().startActivity(TelFunction.getInstance(getItem(position).getFaks()).call());
             }
         });
         return row;

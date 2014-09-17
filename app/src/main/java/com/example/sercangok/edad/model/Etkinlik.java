@@ -1,9 +1,6 @@
 package com.example.sercangok.edad.model;
 
 import java.sql.Date;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 
 /**
  * Created by sercangok on 27/08/14.
@@ -15,8 +12,10 @@ public class Etkinlik {
     private String isim;
     @SuppressWarnings("konusmaci")
     private String konusmaci;
-    @SuppressWarnings("tarih")
-    private Date tarih;
+    @SuppressWarnings("baslangictarihi")
+    private Date baslangictarihi;
+    @SuppressWarnings("bitistarihi")
+    private Date bitistarihi;
     @SuppressWarnings("yer")
     private String yer;
     @SuppressWarnings("kategoriid")
@@ -77,14 +76,6 @@ public class Etkinlik {
         this.konusmaci = konusmaci;
     }
 
-    public Date getTarih() {
-        return tarih;
-    }
-
-    public void setTarih(Date tarih) {
-        this.tarih = tarih;
-    }
-
     public String getYer() {
         return yer;
     }
@@ -99,5 +90,21 @@ public class Etkinlik {
 
     public void setKategoriismi(String kategoriismi) {
         this.kategoriismi = kategoriismi;
+    }
+
+    public Date getBaslangictarihi() {
+        return baslangictarihi;
+    }
+
+    public void setBaslangictarihi(Date baslangictarihi) {
+        this.baslangictarihi = baslangictarihi;
+    }
+
+    public Date getBitistarihi() {
+        return bitistarihi;
+    }
+
+    public void setBitistarihi(Date bitistarihi) {
+        this.bitistarihi = bitistarihi;
     }
 }

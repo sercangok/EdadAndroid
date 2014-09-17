@@ -24,7 +24,8 @@
         android:theme="@style/edadTheme">
         <activity
             android:name=".activity.SplashScreenActivity"
-            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -34,31 +35,40 @@
         <activity
             android:name=".activity.mainActivity.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/edadTheme2"></activity>
+            android:theme="@style/edadTheme2"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".activity.KongreActivity"
-            android:label="@string/title_activity_kongre"></activity>
+            android:label="@string/title_activity_kongre"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".activity.fragmentActivity.KongreFragmetnActivity"
-            android:label="@string/title_activity_kongre"></activity>
+            android:label="@string/title_activity_kongre"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".activity.HakkimizdaActivity"
-            android:label="@string/title_activity_hakkimizda"></activity>
+            android:label="@string/title_activity_hakkimizda"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".activity.UyelikActivity"
-            android:label="@string/title_activity_uyelik"></activity>
+            android:label="@string/title_activity_uyelik"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".activity.EtkinlikActivity"
-            android:label="@string/title_activity_etkinlik"></activity>
+            android:label="@string/title_activity_etkinlik"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".activity.IletisimActivity"
-            android:label="@string/title_activity_iletisim"></activity>
+            android:label="@string/title_activity_iletisim"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".activity.TemsilciliklerimizActivity"
-            android:label="@string/title_activity_temsilciliklerimiz"></activity>
+            android:label="@string/title_activity_temsilciliklerimiz"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".activity.IstGenelMerkezActivity"
-            android:label="@string/title_activity_ist_genel_merkez"></activity>
+            android:label="@string/title_activity_ist_genel_merkez"
+            android:screenOrientation="portrait"></activity>
 
         <receiver
             android:name=".service.receiver.GsmBroadCastReceiver"

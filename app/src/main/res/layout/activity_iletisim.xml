@@ -27,12 +27,14 @@
                 android:layout_gravity="center"
                 android:background="@drawable/logoiletisim" />
 
-            <ImageView
+            <com.example.sercangok.edad.view.TextView300
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|bottom"
                 android:layout_marginBottom="40dp"
-                android:background="@drawable/genelmerkez" />
+                android:text="Genel Merkez"
+                android:textColor="@color/edadmaincolor"
+                android:textSize="15sp" />
         </FrameLayout>
     </TableRow>
 
@@ -56,12 +58,14 @@
                 android:layout_gravity="center"
                 android:background="@drawable/logoiletisim" />
 
-            <ImageView
+            <com.example.sercangok.edad.view.TextView300
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|bottom"
                 android:layout_marginBottom="40dp"
-                android:background="@drawable/temsilcilikler" />
+                android:text="Temsilciliklerimiz"
+                android:textColor="@color/edadmaincolor"
+                android:textSize="15sp" />
         </FrameLayout>
     </TableRow>
 

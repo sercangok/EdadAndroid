@@ -68,9 +68,8 @@ public class CalenderUtil {
         this.context = context;
         this.beginTime = Calendar.getInstance();
         this.endTime = Calendar.getInstance();
-        this.beginTime.setTime(etkinlik.getTarih());
-        this.endTime.setTime(etkinlik.getTarih());
-        this.endTime.add(Calendar.HOUR, 2);
+        this.beginTime.setTime(etkinlik.getBaslangictarihi());
+        this.endTime.setTime(etkinlik.getBitistarihi());
         _beginTime = beginTime.getTimeInMillis();
         _endTime = endTime.getTimeInMillis();
         setRemainder(addEventToCalender(getCalenders().get(0), etkinlik));

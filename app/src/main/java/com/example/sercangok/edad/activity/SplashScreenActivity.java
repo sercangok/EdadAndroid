@@ -25,7 +25,7 @@ public class SplashScreenActivity extends Activity {
         ct.start();
     }
 
-    CountDownTimer ct = new CountDownTimer(1500, 500) {
+    CountDownTimer ct = new CountDownTimer(2000, 500) {
         @Override
         public void onTick(long l) {
 
@@ -40,7 +40,7 @@ public class SplashScreenActivity extends Activity {
 
     Runnable fadeIn = new Runnable() {
         public void run() {
-            iv.animate().setDuration(1000)
+            iv.animate().setDuration(1750)
                     .setInterpolator(new LinearInterpolator()).alpha(1.0f);
         }
     };

@@ -122,7 +122,7 @@
                     android:textSize="30sp"
                     android:orientation="vertical">
 
-                    <TextView
+                    <com.example.sercangok.edad.view.TextView300
                         android:id="@+id/txtSaat"
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
@@ -132,7 +132,7 @@
                         android:gravity="center"
                         android:textSize="20sp" />
 
-                    <TextView
+                    <com.example.sercangok.edad.view.TextView300
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -386,63 +386,13 @@
 
                 </LinearLayout>
 
-                <LinearLayout
+                <com.example.sercangok.edad.view.ExpandableHeightGridView
                     android:id="@+id/lstSosyal"
                     android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="@drawable/sosyaltakvim"
-                        android:layout_marginBottom="5dp" />
-
-                    <com.example.sercangok.edad.view.TextView300
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        android:text="Gala Yemegi"
-                        android:gravity="center"
-                        android:layout_gravity="center"
-                        android:textColor="@color/edadFontColor"
-                        android:layout_marginBottom="10dp" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="@drawable/sosyalzaman"
-                        android:layout_marginBottom="5dp" />
-
-                    <com.example.sercangok.edad.view.TextView300
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        android:text="18:00-19:00"
-                        android:gravity="center"
-                        android:layout_gravity="center"
-                        android:textColor="@color/edadFontColor"
-                        android:layout_marginBottom="10dp" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="@drawable/sosyalyer"
-                        android:layout_marginBottom="5dp" />
-
-                    <com.example.sercangok.edad.view.TextView300
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        android:text="Grand Cevahir Otel No9 D5"
-                        android:gravity="center"
-                        android:layout_gravity="center"
-                        android:textColor="@color/edadFontColor"
-                        android:layout_marginBottom="10dp" />
-                </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:dividerHeight="2dp"
+                    android:numColumns="1"
+                    android:divider="@android:color/white" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

@@ -17,6 +17,7 @@ import com.example.sercangok.edad.model.Etkinlik;
 import com.example.sercangok.edad.util.CalenderUtil;
 
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -54,8 +55,40 @@ public class EtkinlikAdapter extends ArrayAdapter<Etkinlik> {
         imgPin = (ImageButton) row.findViewById(R.id.imgPin);
         frmTakvimeEkle = (FrameLayout) row.findViewById(R.id.frmTakvimeEkle);
         txtAd.setText(getItem(position).getIsim());
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        txtTarih.setText(simpleDateFormat.format(getItem(position).getTarih()));
+        //SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        //txtTarih.setText(simpleDateFormat.format(getItem(position).getBaslangictarihi()));
+
+
+        Date timeeBaslangic = getItem(position).getBaslangictarihi();
+        Date timeeBitis = getItem(position).getBitistarihi();
+        SimpleDateFormat format = new SimpleDateFormat("d MMMM EEEE yyyy, ");
+        SimpleDateFormat formatt = new SimpleDateFormat("d MMMM EEEE yyyy, k:m");
+        SimpleDateFormat format2 = new SimpleDateFormat("k");
+        SimpleDateFormat format3 = new SimpleDateFormat("m");
+        String time = format.format(timeeBaslangic);
+        String timeTemp = formatt.format(timeeBaslangic) + "\n" + formatt.format(timeeBitis);
+        if (Integer.parseInt(format2.format(timeeBaslangic)) < 10)
+            time += " 0" + format2.format(timeeBaslangic);
+        else
+            time += format2.format(timeeBaslangic);
+        time += ":";
+        if (Integer.parseInt(format3.format(timeeBaslangic)) < 10)
+            time += "0" + format3.format(timeeBaslangic);
+        else
+            time += format3.format(timeeBaslangic);
+        time += " \n" + format.format(timeeBitis);
+        if (Integer.parseInt(format2.format(timeeBitis)) < 10)
+            time += "0" + format2.format(timeeBitis);
+        else
+            time += format2.format(timeeBitis);
+        time += ":";
+        if (Integer.parseInt(format3.format(timeeBitis)) < 10)
+            time += "0" + format3.format(timeeBitis);
+        else
+            time += format3.format(timeeBitis);
+        txtTarih.setText(time);
+
+
         txtAdres.setText(getItem(position).getYer());
         txtKategori.setText(getItem(position).getKategoriismi());
 

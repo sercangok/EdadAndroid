@@ -10,6 +10,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.Point;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
@@ -20,10 +21,13 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Display;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -32,14 +36,15 @@ import com.example.sercangok.edad.R;
 import com.example.sercangok.edad.activity.EtkinlikActivity;
 import com.example.sercangok.edad.activity.HakkimizdaActivity;
 import com.example.sercangok.edad.activity.IletisimActivity;
+import com.example.sercangok.edad.activity.KongreActivity;
 import com.example.sercangok.edad.activity.UyelikActivity;
-import com.example.sercangok.edad.activity.fragmentActivity.KongreFragmetnActivity;
 import com.example.sercangok.edad.interfaces.ReadyToSetView;
 import com.example.sercangok.edad.model.Etkinlik;
 import com.example.sercangok.edad.model.IstGenelMerkez;
 import com.example.sercangok.edad.model.Temsilcilik;
 import com.example.sercangok.edad.model.YonetimKurulu;
 import com.example.sercangok.edad.tasks.OzelEdadKongreTask;
+import com.example.sercangok.edad.util.ScreenUtil;
 import com.example.sercangok.edad.util.TelFunction;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
@@ -66,8 +71,10 @@ public class MainActivity extends Activity implements ReadyToSetView {
     public static final String PROPERTY_REG_ID = "registration_id";
     private static final String PROPERTY_APP_VERSION = "appVersion";
     private final static int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
+    private int width, height;
     private GoogleCloudMessaging gcm;
     private ImageView imgKongre;
+    private FrameLayout frmKongre;
     public static final String urlPost = "http://mobilklinik.net/edad/view/kullaniciekle.php";
     public static String url = "http://mobilklinik.net/edad/view/anasayfabanner.php";
     private ProgressBar prgKongre;
@@ -85,6 +92,12 @@ public class MainActivity extends Activity implements ReadyToSetView {
         setContentView(R.layout.activity_my);
         context = (Context) this;
         register();
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        width = size.x;
+        height = size.y;
+        ScreenUtil util = new ScreenUtil(width, height);
         init();
         setBitmaps();
         checkForKongre();
@@ -296,14 +309,22 @@ public class MainActivity extends Activity implements ReadyToSetView {
 
     private void init() {
         imgKongre = (ImageView) findViewById(R.id.imgKongre);
+        frmKongre = (FrameLayout) findViewById(R.id.frmKongre);
         prgKongre = (ProgressBar) findViewById(R.id.prgKongre);
+        ViewGroup.LayoutParams params = frmKongre.getLayoutParams();
+        params.width = (int) ScreenUtil.getInstance(width, height).height;
+        params.height = (int) ScreenUtil.getInstance(width, height).width;
+        frmKongre.setLayoutParams(params);
     }
 
     private void checkForKongre() {
         prgKongre.setVisibility(View.VISIBLE);
         //((ImageView) findViewById(R.id.imgKongre)).setVisibility(View.GONE);
         // ((FrameLayout) findViewById(R.id.frmKongre)).setBackgroundResource(android.R.color.transparent);
-        new OzelEdadKongreTask(this).execute();
+        if (isNetworkAvailable())
+            new OzelEdadKongreTask(this, this.url).execute();
+        else
+            Toast.makeText(this, "Internet Bağlantınızı Kontrol Ediniz.", Toast.LENGTH_LONG).show();
     }
 
     public void onClick_Etkinliklerimiz(View v) {
@@ -333,7 +354,7 @@ public class MainActivity extends Activity implements ReadyToSetView {
 
     public void onClick_Kongre(View v) {
         if (kongreFlag)
-            startActivity(new Intent(this, KongreFragmetnActivity.class));
+            startActivity(new Intent(this, KongreActivity.class));
     }
 
     public void onClick_KayitOl(View v) {

@@ -10,6 +10,16 @@ public class Hakkimizda {
     private int hakkimizdaid;
     @SerializedName("hakkimizda")
     private String hakkimizda;
+    @SerializedName("resim")
+    private String resim;
+
+    public String getResim() {
+        return resim;
+    }
+
+    public void setResim(String resim) {
+        this.resim = resim;
+    }
 
     public int getHakkimizdaID() {
         return hakkimizdaid;

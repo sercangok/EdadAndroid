@@ -5,7 +5,6 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.example.sercangok.edad.activity.mainActivity.MainActivity;
 import com.example.sercangok.edad.interfaces.ReadyToSetView;
 import com.example.sercangok.edad.model.Banner;
 import com.google.gson.Gson;
@@ -28,9 +27,11 @@ import java.net.URL;
  */
 public class OzelEdadKongreTask extends AsyncTask<Void, Void, Bitmap> {
     ReadyToSetView mListener;
+    private String url;
 
-    public OzelEdadKongreTask(ReadyToSetView mListener) {
+    public OzelEdadKongreTask(ReadyToSetView mListener, String url) {
         this.mListener = mListener;
+        this.url = url;
     }
 
     @Override
@@ -45,7 +46,7 @@ public class OzelEdadKongreTask extends AsyncTask<Void, Void, Bitmap> {
     }
 
     private Bitmap setConnection() {
-        InputStream source = retrieveStream(MainActivity.url);
+        InputStream source = retrieveStream(url);
         Gson gson = new Gson();
         Reader reader = new InputStreamReader(source);
         Banner response = gson.fromJson(reader, Banner.class);

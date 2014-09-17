@@ -18,6 +18,16 @@ public class Temsilcilik {
     protected String email;
     @SuppressWarnings("gsm")
     protected String gsm;
+    @SuppressWarnings("faks")
+    protected String faks;
+
+    public String getFaks() {
+        return faks;
+    }
+
+    public void setFaks(String faks) {
+        this.faks = faks;
+    }
 
     public String getTemsilciid() {
         return temsilciid;

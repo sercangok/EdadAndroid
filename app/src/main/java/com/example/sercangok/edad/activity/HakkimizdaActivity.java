@@ -23,10 +23,14 @@ import com.example.sercangok.edad.model.Hakkimizda;
 import com.example.sercangok.edad.model.IstGenelMerkez;
 import com.example.sercangok.edad.model.Temsilcilik;
 import com.example.sercangok.edad.model.YonetimKurulu;
+import com.example.sercangok.edad.tasks.BaskanResimTask;
 import com.example.sercangok.edad.tasks.HakkimizdaTask;
+import com.example.sercangok.edad.tasks.OzelEdadKongreTask;
 import com.example.sercangok.edad.tasks.YonetimKuruluTask;
 
 import java.util.List;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 
 public class HakkimizdaActivity extends Activity implements ReadyToSetView {
@@ -34,6 +38,7 @@ public class HakkimizdaActivity extends Activity implements ReadyToSetView {
     private TextView txtHakkimizda;
     private ProgressBar prgHakkimizda, prgYonetim;
     private LinearLayout lnrHakkimizda;
+    private CircleImageView imgBaskan;
 
     public static String url = "http://mobilklinik.net/edad/view/hakkimizda.php";
     public static String urlKurul = "http://mobilklinik.net/edad/view/yonetimkurulu.php";
@@ -56,6 +61,7 @@ public class HakkimizdaActivity extends Activity implements ReadyToSetView {
         prgHakkimizda = (ProgressBar) findViewById(R.id.prgHakkimizda);
         prgYonetim = (ProgressBar) findViewById(R.id.prgYonetimKurulu);
         lnrHakkimizda = (LinearLayout) findViewById(R.id.lnrHakkimizda);
+        imgBaskan = (CircleImageView) findViewById(R.id.imgBaskan);
         lnrHakkimizda.setVisibility(View.GONE);
         prgHakkimizda.setVisibility(View.VISIBLE);
         new YonetimKuruluTask(this).execute();
@@ -71,12 +77,13 @@ public class HakkimizdaActivity extends Activity implements ReadyToSetView {
         txtHakkimizda.setText(object instanceof Hakkimizda ? ((Hakkimizda) object).getHakkimizda() : "Değer Bulunamadı");
         prgHakkimizda.setVisibility(View.GONE);
         lnrHakkimizda.setVisibility(View.VISIBLE);
+        new BaskanResimTask(this, ((Hakkimizda) object).getResim()).execute();
 
     }
 
     @Override
     public void readToSetBitmap(Bitmap object) {
-
+        imgBaskan.setImageBitmap(object);
     }
 
     @Override
