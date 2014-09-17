@@ -22,14 +22,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/logo"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginBottom="5dp">
+                android:layout_marginBottom="15dp">
 
                 <com.example.sercangok.edad.view.TextView700
                     android:layout_width="wrap_content"
