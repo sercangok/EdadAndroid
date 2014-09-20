@@ -42,7 +42,7 @@ public class YonetimKuruluTask extends AsyncTask<Void, Void, List<YonetimKurulu>
         super.onPostExecute(yonetimKurulu);
         mListener.readyToSetYonetimKurulu(yonetimKurulu);
     }
-
+//test
     private List<YonetimKurulu> setConnection() {
         InputStream source = retrieveStream(HakkimizdaActivity.urlKurul);
         Gson gson = new Gson();
