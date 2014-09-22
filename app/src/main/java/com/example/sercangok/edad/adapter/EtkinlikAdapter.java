@@ -1,5 +1,7 @@
 package com.example.sercangok.edad.adapter;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -13,10 +15,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.sercangok.edad.R;
+import com.example.sercangok.edad.interfaces.ProgramAddedToCalender;
 import com.example.sercangok.edad.model.Etkinlik;
+import com.example.sercangok.edad.service.FavoriTimingService;
 import com.example.sercangok.edad.util.CalenderUtil;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -35,6 +40,8 @@ public class EtkinlikAdapter extends ArrayAdapter<Etkinlik> {
     public ImageView imgKategori;
     public FrameLayout frmTakvimeEkle;
     public ImageButton imgPin;
+    public ImageButton imgFav;
+    public static ProgramAddedToCalender mListener;
     LayoutInflater inflater;
 
     public EtkinlikAdapter(Context context, int resource, List<Etkinlik> objects) {
@@ -59,7 +66,7 @@ public class EtkinlikAdapter extends ArrayAdapter<Etkinlik> {
         //txtTarih.setText(simpleDateFormat.format(getItem(position).getBaslangictarihi()));
 
 
-        Date timeeBaslangic = getItem(position).getBaslangictarihi();
+        final Date timeeBaslangic = getItem(position).getBaslangictarihi();
         Date timeeBitis = getItem(position).getBitistarihi();
         SimpleDateFormat format = new SimpleDateFormat("d MMMM EEEE yyyy, ");
         SimpleDateFormat formatt = new SimpleDateFormat("d MMMM EEEE yyyy, k:m");
@@ -104,10 +111,33 @@ public class EtkinlikAdapter extends ArrayAdapter<Etkinlik> {
             }
         });
 
+
         frmTakvimeEkle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 CalenderUtil.getInstanceEdadKongreProgram(getContext(), getItem(position));
+            }
+        });
+
+
+        ((ImageButton) row.findViewById(R.id.imgFav)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Calendar calendar = Calendar.getInstance();
+                calendar.setTime(getItem(position).getBaslangictarihi());
+                calendar.add(Calendar.DAY_OF_MONTH, -15);
+
+                calendar.setTime(Calendar.getInstance().getTime());
+                calendar.add(Calendar.SECOND, 30);
+                calendar.add(Calendar.SECOND, -15);
+
+                AlarmManager alarmManager = (AlarmManager) getContext().getSystemService(Context.ALARM_SERVICE);
+                Intent _myIntent = new Intent(getContext(), FavoriTimingService.class);
+                _myIntent.putExtra("etkinlik", getItem(position));
+                _myIntent.putExtra("kalangün", 15);
+                PendingIntent _myPendingIntent = PendingIntent.getService(getContext(), 0, _myIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+                alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), _myPendingIntent);
+                mListener.readyToShowToast();
             }
         });
 
@@ -120,6 +150,7 @@ public class EtkinlikAdapter extends ArrayAdapter<Etkinlik> {
                 return row;
             case 3:
                 row.setBackgroundResource(R.drawable.borderblue);
+                ((ImageButton) row.findViewById(R.id.imgFav)).setVisibility(View.VISIBLE);
                 return row;
             default:
                 return row;

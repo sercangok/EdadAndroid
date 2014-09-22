@@ -72,7 +72,11 @@ public class CalenderUtil {
         this.endTime.setTime(etkinlik.getBitistarihi());
         _beginTime = beginTime.getTimeInMillis();
         _endTime = endTime.getTimeInMillis();
-        setRemainder(addEventToCalender(getCalenders().get(0), etkinlik));
+        if (etkinlik.getKategoriid() == 1)
+            setRemainderEventActivity(addEventToCalender(getCalenders().get(0), etkinlik), true);
+        else
+            setRemainderEventActivity(addEventToCalender(getCalenders().get(0), etkinlik), false);
+        //setRemainder(addEventToCalender(getCalenders().get(0), etkinlik));
     }
 
 
@@ -157,7 +161,7 @@ public class CalenderUtil {
     public void setRemainderEventActivity(long eventID, boolean isAksamToplantisi) {
         for (int i = 0; i < 2; i++) {
             if (i == 0 && !isAksamToplantisi) remainderMinute = 15 * 24 * 60;
-            else if (i == 0 && isAksamToplantisi) remainderMinute = 1 * 24 * 60;
+            else if (i == 0 && isAksamToplantisi) remainderMinute = 24 * 60;
             else remainderMinute = 3 * 24 * 60;
             ContentResolver cr = context.getContentResolver();
             ContentValues values = new ContentValues();

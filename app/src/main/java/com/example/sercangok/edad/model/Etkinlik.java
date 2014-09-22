@@ -1,11 +1,12 @@
 package com.example.sercangok.edad.model;
 
+import java.io.Serializable;
 import java.sql.Date;
 
 /**
  * Created by sercangok on 27/08/14.
  */
-public class Etkinlik {
+public class Etkinlik implements Serializable {
     @SuppressWarnings("etkinlikid")
     private int etkinlikid;
     @SuppressWarnings("isim")

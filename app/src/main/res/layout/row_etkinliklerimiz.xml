@@ -11,15 +11,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="4"
+        android:weightSum="5.5"
         android:layout_margin="10dp">
 
         <com.example.sercangok.edad.view.TextView500
             android:id="@+id/txtKategori"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:textSize="16sp"
-            android:layout_weight="2.2"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_weight="3"
             android:textColor="@android:color/white"
             android:layout_gravity="center"
             android:gravity="center|left" />
@@ -27,13 +27,22 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1.8"
+            android:layout_weight="2.5"
             android:orientation="horizontal">
 
             <ImageButton
+                android:id="@+id/imgFav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/favoridrawable"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:visibility="invisible" />
+
+            <ImageButton
                 android:id="@+id/imgPin"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:background="@drawable/pinbuttondrawable"
                 android:layout_marginRight="10dp"
                 android:layout_gravity="center" />
@@ -45,15 +54,9 @@
                 android:background="@drawable/takvimbuttondrawable"
                 android:layout_gravity="center">
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/takvimbuttondrawable"
-                    android:layout_gravity="center" />
-
                 <com.example.sercangok.edad.view.TextView500
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="25dp"
                     android:gravity="center"
                     android:layout_gravity="center"
                     android:textSize="12sp"

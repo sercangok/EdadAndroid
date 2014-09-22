@@ -47,6 +47,7 @@ public class EtkinlikActivity extends Activity implements ReadyToSetView, Progra
         setContentView(R.layout.activity_etkinlik);
         getActionBar().setDisplayHomeAsUpEnabled(true);
         CalenderUtil.mListener = this;
+        EtkinlikAdapter.mListener = this;
         init();
     }
 
@@ -140,6 +141,6 @@ public class EtkinlikActivity extends Activity implements ReadyToSetView, Progra
 
     @Override
     public void readyToShowToast() {
-        Toast.makeText(this, "Etkinliğimiz takviminize eklendi.", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Etkinliğimiz başarıyla eklendi.", Toast.LENGTH_LONG).show();
     }
 }
