@@ -353,7 +353,7 @@ public class MainActivity extends Activity implements ReadyToSetView {
     }
 
     public void onClick_Kongre(View v) {
-        if (kongreFlag)
+        if (isNetworkAvailable())
             startActivity(new Intent(this, KongreActivity.class));
     }
 

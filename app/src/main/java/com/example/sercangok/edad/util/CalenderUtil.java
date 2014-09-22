@@ -154,6 +154,20 @@ public class CalenderUtil {
         mListener.readyToShowToast();
     }
 
+    public void setRemainderEventActivity(long eventID, boolean isAksamToplantisi) {
+        for (int i = 0; i < 2; i++) {
+            if (i == 0 && !isAksamToplantisi) remainderMinute = 15 * 24 * 60;
+            else if (i == 0 && isAksamToplantisi) remainderMinute = 1 * 24 * 60;
+            else remainderMinute = 3 * 24 * 60;
+            ContentResolver cr = context.getContentResolver();
+            ContentValues values = new ContentValues();
+            values.put(CalendarContract.Reminders.MINUTES, remainderMinute);
+            values.put(CalendarContract.Reminders.EVENT_ID, eventID);
+            values.put(CalendarContract.Reminders.METHOD, CalendarContract.Reminders.METHOD_ALERT);
+            Uri uri = cr.insert(CalendarContract.Reminders.CONTENT_URI, values);
+        }
+        mListener.readyToShowToast();
+    }
 
     private void setRemainderEdadKongre(Long eventID) {
         for (int i = 1; i <= 3; i++) {
