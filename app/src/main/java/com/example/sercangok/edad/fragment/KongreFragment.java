@@ -120,7 +120,8 @@ public class KongreFragment extends Fragment implements View.OnClickListener, Pr
     }
 
     @Override
-    public void readyToShowToast() {
-        Toast.makeText(getActivity().getApplicationContext(), "Etkinliğimiz takviminize eklendi.", Toast.LENGTH_LONG).show();
+    public void readyToShowToast(boolean isFav) {
+        Toast.makeText(getActivity().getApplicationContext(), "Etkinliğimiz " + ((isFav == false) ?
+                "takvinize" : "favorilerinize") + " eklendi.", Toast.LENGTH_LONG).show();
     }
 }

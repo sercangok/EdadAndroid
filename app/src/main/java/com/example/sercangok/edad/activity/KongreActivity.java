@@ -138,11 +138,6 @@ public class KongreActivity extends FragmentActivity implements ProgramAddedToCa
     };
 
     @Override
-    public void readyToShowToast() {
-        Toast.makeText(this, "Etkinliğimiz takviminize eklendi.", Toast.LENGTH_LONG).show();
-    }
-
-    @Override
     public void onClick(View view) {
         if (view.getId() == ilkGun.getId()) {
             ((FrameLayout) ilkGun.findViewById(R.id.frmIndıcator)).setVisibility(View.VISIBLE);
@@ -172,5 +167,11 @@ public class KongreActivity extends FragmentActivity implements ProgramAddedToCa
             list.add(Programlar.sosyalProgramKokteyl);
             lstSosyal.setAdapter(new SosyalProgramAdapter(this, R.layout.fragment_sosyalprogram, list));
         }
+    }
+
+    @Override
+    public void readyToShowToast(boolean isFav) {
+        Toast.makeText(this, "Etkinliğimiz " + ((isFav == false) ?
+                "takvinize" : "favorilerinize") + " eklendi.", Toast.LENGTH_LONG).show();
     }
 }

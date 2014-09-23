@@ -54,7 +54,8 @@ public class Programlar {
         calF = Calendar.getInstance();
         calS.set(KongreInfo.ilkGun.kongreYil, KongreInfo.ilkGun.kongreAy, KongreInfo.ilkGun.kongreGun, 13, 45);
         calF.set(KongreInfo.ilkGun.kongreYil, KongreInfo.ilkGun.kongreAy, KongreInfo.ilkGun.kongreGun, 14, 45);
-        programlar17EkimCuma.add(new Program(calS, calF, "Prof.Dr. Selim Pamuk", "Dijital estetiğin neresindeyiz?"));
+        programlar17EkimCuma.add(new Program(calS, calF, "Dr. Wael Att",
+                "İmplant dişhekimliğinin son durumu ve geleceği"));
         calS = Calendar.getInstance();
         calF = Calendar.getInstance();
         calS.set(KongreInfo.ilkGun.kongreYil, KongreInfo.ilkGun.kongreAy, KongreInfo.ilkGun.kongreGun, 14, 45);
@@ -88,8 +89,8 @@ public class Programlar {
         calF = Calendar.getInstance();
         calS.set(KongreInfo.ikinciGun.kongreYil, KongreInfo.ikinciGun.kongreAy, KongreInfo.ikinciGun.kongreGun, 9, 30);
         calF.set(KongreInfo.ikinciGun.kongreYil, KongreInfo.ikinciGun.kongreAy, KongreInfo.ikinciGun.kongreGun, 10, 30);
-        programlar18EkimCtesi.add(new Program(calS, calF, "Dr. Wael Att",
-                "İmplant dişhekimliğinin son durumu ve geleceği"));
+        programlar18EkimCtesi.add(new Program(calS, calF, "Dr. Axel Mory",
+                "Kortikotomi - Hızlandırılmış osteojenik ortodonti: Ortodontide yeni olanaklar"));
         calS = Calendar.getInstance();
         calF = Calendar.getInstance();
         calS.set(KongreInfo.ikinciGun.kongreYil, KongreInfo.ikinciGun.kongreAy, KongreInfo.ikinciGun.kongreGun, 10, 30);
@@ -116,8 +117,7 @@ public class Programlar {
         calF = Calendar.getInstance();
         calS.set(KongreInfo.ikinciGun.kongreYil, KongreInfo.ikinciGun.kongreAy, KongreInfo.ikinciGun.kongreGun, 14, 30);
         calF.set(KongreInfo.ikinciGun.kongreYil, KongreInfo.ikinciGun.kongreAy, KongreInfo.ikinciGun.kongreGun, 15, 30);
-        programlar18EkimCtesi.add(new Program(calS, calF, "Dr. Axel Mory",
-                "Kortikotomi - Hızlandırılmış osteojenik ortodonti: Ortodontide yeni olanaklar"));
+        programlar18EkimCtesi.add(new Program(calS, calF, "Prof.Dr. Selim Pamuk", "Dijital estetiğin neresindeyiz?"));
         calS = Calendar.getInstance();
         calF = Calendar.getInstance();
         calS.set(KongreInfo.ikinciGun.kongreYil, KongreInfo.ikinciGun.kongreAy, KongreInfo.ikinciGun.kongreGun, 15, 30);

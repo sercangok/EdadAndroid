@@ -140,7 +140,8 @@ public class EtkinlikActivity extends Activity implements ReadyToSetView, Progra
     }
 
     @Override
-    public void readyToShowToast() {
-        Toast.makeText(this, "Etkinliğimiz başarıyla eklendi.", Toast.LENGTH_LONG).show();
+    public void readyToShowToast(boolean isFav) {
+        Toast.makeText(this, "Etkinliğimiz " + ((isFav == false) ?
+                "takvinize" : "favorilerinize") + " eklendi.", Toast.LENGTH_LONG).show();
     }
 }

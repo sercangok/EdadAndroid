@@ -71,7 +71,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="7"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="5dp">
 
         <FrameLayout
             android:layout_width="0dp"
@@ -102,7 +103,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="7"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="5dp">
 
         <FrameLayout
             android:layout_width="0dp"
@@ -134,7 +136,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="7"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="5dp">
 
         <FrameLayout
             android:layout_width="0dp"

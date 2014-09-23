@@ -75,12 +75,13 @@
 
             <com.example.sercangok.edad.view.TextView500
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="13sp"
                 android:text="ETKİNLİKLERİMİZ"
-                android:layout_gravity="center"
+                android:layout_gravity="center|bottom"
                 android:shadowColor="@android:color/black"
                 android:shadowRadius="10"
                 android:gravity="center"
+                android:layout_marginBottom="5dp"
                 android:layout_width="match_parent" />
         </FrameLayout>
 
@@ -107,11 +108,12 @@
 
             <com.example.sercangok.edad.view.TextView500
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="13sp"
                 android:text="ÜYELİK"
                 android:shadowColor="@android:color/black"
                 android:shadowRadius="10"
-                android:layout_gravity="center"
+                android:layout_gravity="center|bottom"
+                android:layout_marginBottom="5dp"
                 android:gravity="center"
                 android:layout_width="match_parent" />
         </FrameLayout>
@@ -140,13 +142,14 @@
 
             <com.example.sercangok.edad.view.TextView500
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="13sp"
                 android:text="HAKKIMIZDA"
-                android:layout_gravity="center"
+                android:layout_gravity="center|bottom"
                 android:shadowColor="@android:color/black"
                 android:shadowRadius="10"
                 android:gravity="center"
                 android:layout_width="match_parent"
+                android:layout_marginBottom="5dp"
                 android:scaleType="centerCrop"
                 android:onClick="onClick_Kongre" />
         </FrameLayout>
@@ -175,11 +178,12 @@
 
             <com.example.sercangok.edad.view.TextView500
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="13sp"
                 android:text="İLETİŞİM"
                 android:shadowColor="@android:color/black"
                 android:shadowRadius="10"
-                android:layout_gravity="center"
+                android:layout_gravity="center|bottom"
+                android:layout_marginBottom="5dp"
                 android:gravity="center"
                 android:layout_width="match_parent" />
         </FrameLayout>

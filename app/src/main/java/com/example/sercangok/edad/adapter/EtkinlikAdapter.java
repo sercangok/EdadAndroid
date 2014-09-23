@@ -137,7 +137,7 @@ public class EtkinlikAdapter extends ArrayAdapter<Etkinlik> {
                 _myIntent.putExtra("kalangün", 15);
                 PendingIntent _myPendingIntent = PendingIntent.getService(getContext(), 0, _myIntent, PendingIntent.FLAG_UPDATE_CURRENT);
                 alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), _myPendingIntent);
-                mListener.readyToShowToast();
+                mListener.readyToShowToast(true);
             }
         });
 

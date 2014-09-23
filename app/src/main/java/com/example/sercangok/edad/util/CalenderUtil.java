@@ -155,7 +155,7 @@ public class CalenderUtil {
         values.put(CalendarContract.Reminders.EVENT_ID, eventID);
         values.put(CalendarContract.Reminders.METHOD, CalendarContract.Reminders.METHOD_ALERT);
         Uri uri = cr.insert(CalendarContract.Reminders.CONTENT_URI, values);
-        mListener.readyToShowToast();
+        mListener.readyToShowToast(false);
     }
 
     public void setRemainderEventActivity(long eventID, boolean isAksamToplantisi) {
@@ -170,7 +170,7 @@ public class CalenderUtil {
             values.put(CalendarContract.Reminders.METHOD, CalendarContract.Reminders.METHOD_ALERT);
             Uri uri = cr.insert(CalendarContract.Reminders.CONTENT_URI, values);
         }
-        mListener.readyToShowToast();
+        mListener.readyToShowToast(false);
     }
 
     private void setRemainderEdadKongre(Long eventID) {
@@ -185,7 +185,7 @@ public class CalenderUtil {
             values.put(CalendarContract.Reminders.METHOD, CalendarContract.Reminders.METHOD_ALERT);
             Uri uri = cr.insert(CalendarContract.Reminders.CONTENT_URI, values);
         }
-        mListener.readyToShowToast();
+        mListener.readyToShowToast(false);
     }
 
 }
