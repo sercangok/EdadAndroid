@@ -369,23 +369,23 @@ public class MainActivity extends Activity implements ReadyToSetView {
     }
 
     public void onClick_Ipana(View v) {
-        openWebPage("https://www.facebook.com");
+        openWebPage("http://www.pg.com.tr");
     }
 
     public void onClick_Espe(View v) {
-        openWebPage("https://www.google.com");
+        openWebPage("http://www.3m.com");
     }
 
     public void onClick_Botis(View v) {
-        openWebPage("https://www.google.com");
+        openWebPage("http://www.botiss.com.tr");
     }
 
     public void onClick_Nobel(View v) {
-        openWebPage("https://www.google.com");
+        openWebPage("http://www.nobelbiocare.com");
     }
 
     public void onClick_Sirona(View v) {
-        openWebPage("https://www.facebook.com");
+        openWebPage("http://www.sirona.com");
     }
 
     public void openWebPage(String url) {
