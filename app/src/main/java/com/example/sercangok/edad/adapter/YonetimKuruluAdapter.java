@@ -2,12 +2,12 @@ package com.example.sercangok.edad.adapter;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Path;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,6 +48,10 @@ public class YonetimKuruluAdapter extends ArrayAdapter<YonetimKurulu> implements
         imgProfil = (ImageView) row.findViewById(R.id.imgProfile);
         txtAdSoyad.setText(getItem(position).getIsim());
         txtPozisyon.setText(getItem(position).getUnvan());
+        Bitmap icon = BitmapFactory.decodeResource(getContext().getResources(),
+                R.drawable.suliyet);
+        Drawable drawable = new BitmapDrawable(getContext().getResources(), getRoundedShape(icon));
+        imgProfil.setBackground(drawable);
         Picasso.with(getContext()).load(getItem(position).getResim()).into(target);
         //Picasso.with(getContext()).load(getItem(position).getResim()).transform(new RoundedTransformation(360, 0)).into(imgProfil);
         return row;
@@ -57,7 +61,7 @@ public class YonetimKuruluAdapter extends ArrayAdapter<YonetimKurulu> implements
         @Override
         public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
             Drawable drawable = new BitmapDrawable(getContext().getResources(), getRoundedShape(bitmap));
-            imgProfil.setImageDrawable(drawable);
+            imgProfil.setBackground(drawable);
         }
 
         @Override
