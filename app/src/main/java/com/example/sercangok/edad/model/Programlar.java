@@ -82,7 +82,7 @@ public class Programlar {
         calS.set(KongreInfo.ilkGun.kongreYil, KongreInfo.ilkGun.kongreAy, KongreInfo.ilkGun.kongreGun, 18, 15);
         calF.set(KongreInfo.ilkGun.kongreYil, KongreInfo.ilkGun.kongreAy, KongreInfo.ilkGun.kongreGun, 19, 0);
         programlar17EkimCuma.add(new Program(calS, calF, "Hoşgeldiniz Kokteyli", ""));
-        sosyalProgramKokteyl = new Program(calS, calF, "Hoşgeldiniz Kokteyli");
+        sosyalProgramKokteyl = new Program(calS, calF, "Hoşgeldiniz Kokteyli", "Grand Cevahir Otel Sergi Alanı", true);
 
 
         calS = Calendar.getInstance();
@@ -134,7 +134,7 @@ public class Programlar {
         calS.set(KongreInfo.ikinciGun.kongreYil, KongreInfo.ikinciGun.kongreAy, KongreInfo.ikinciGun.kongreGun, 20, 0);
         calF.set(KongreInfo.ikinciGun.kongreYil, KongreInfo.ikinciGun.kongreAy, KongreInfo.ikinciGun.kongreGun, 2, 0);
         programlar18EkimCtesi.add(new Program(calS, calF, "Gala Yemeği", ""));
-        sosyalProgramGala = new Program(calS, calF, "Gala Yemeği");
+        sosyalProgramGala = new Program(calS, calF, "Gala Yemeği", "Su Ada", true);
 
 
         calS = Calendar.getInstance();

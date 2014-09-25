@@ -12,6 +12,7 @@ public class Program {
     public Calendar calendarBitis;
     private String title;
     private String yapılcak;
+    private String adres;
     public boolean saatlikEvent;
 
     public Program(Calendar calendarBaslangic, Calendar calendarBitis, String title, String yapılcak) {
@@ -22,10 +23,11 @@ public class Program {
         saatlikEvent = false;
     }
 
-    public Program(Calendar calS, Calendar calF, String yapılcak) {
+    public Program(Calendar calS, Calendar calF, String yapılcak, String adres, boolean isSosyal) {
         this.calendarBaslangic = calS;
         this.calendarBitis = calF;
         this.yapılcak = yapılcak;
+        this.adres = adres;
         saatlikEvent = false;
     }
 
@@ -35,6 +37,10 @@ public class Program {
 
     public String getTitle() {
         return title;
+    }
+
+    public String getAdress() {
+        return adres;
     }
 
     @Override

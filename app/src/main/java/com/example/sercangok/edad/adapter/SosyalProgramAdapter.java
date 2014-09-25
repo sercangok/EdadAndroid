@@ -34,6 +34,7 @@ public class SosyalProgramAdapter extends ArrayAdapter<Program> {
         txtTarih = (TextView300) row.findViewById(R.id.txtTarih);
         txtAdress = (TextView300) row.findViewById(R.id.txtAdress);
         txtIsım.setText(getItem(position).getYapılcak());
+        txtAdress.setText(getItem(position).getAdress());
         Date timeeBaslangic = getItem(position).calendarBaslangic.getTime();
         Date timeeBitis = getItem(position).calendarBitis.getTime();
         SimpleDateFormat format = new SimpleDateFormat("d MMMM EEEE yyyy, ");
