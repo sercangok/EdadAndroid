@@ -34,11 +34,8 @@ public class Programlar {
         calF = Calendar.getInstance();
         calS.set(KongreInfo.ilkGun.kongreYil, KongreInfo.ilkGun.kongreAy, KongreInfo.ilkGun.kongreGun, 9, 30);
         calF.set(KongreInfo.ilkGun.kongreYil, KongreInfo.ilkGun.kongreAy, KongreInfo.ilkGun.kongreGun, 10, 30);
-<<<<<<< Updated upstream:app/src/main/java/com/example/sercangok/edad/model/Programlar.java
         programlar17EkimCuma.add(new Program(calS, calF, "Dr. Hrvoje Juric ", "Dental Travmanın Tedavisinde Güncel Olanaklar"));
-=======
-        programlar17EkimCuma.add(new Program(calS, calF, "Dr. Paulo Monteiro", "Estetik dişhekimliginde direkt ve indirekt uygulamalar: Kazanan tarifler"));
->>>>>>> Stashed changes:app/src/main/java/com/salyangoz/edad/model/Programlar.java
+
         calS = Calendar.getInstance();
         calF = Calendar.getInstance();
         calS.set(KongreInfo.ilkGun.kongreYil, KongreInfo.ilkGun.kongreAy, KongreInfo.ilkGun.kongreGun, 10, 30);
@@ -100,7 +97,7 @@ public class Programlar {
         calS.set(KongreInfo.ilkGun.kongreYil, KongreInfo.ilkGun.kongreAy, KongreInfo.ilkGun.kongreGun, 18, 15);
         calF.set(KongreInfo.ilkGun.kongreYil, KongreInfo.ilkGun.kongreAy, KongreInfo.ilkGun.kongreGun, 19, 0);
         programlar17EkimCuma.add(new Program(calS, calF, "Açılış Kokteyli", ""));
-        sosyalProgramKokteyl = new Program(calS, calF, "Açılış Kokteyli", "Grand Cevahir Otel Sergi Alanı", true);
+        sosyalProgramKokteyl = new Program(calS, calF, "Açılış Kokteyli", "Wyndham Grand Otel Levent İstanbul", true);
 
 
         calS = Calendar.getInstance();

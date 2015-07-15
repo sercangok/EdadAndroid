@@ -63,8 +63,8 @@ public class KongreAdapter extends ArrayAdapter<String> {
 
     static class HeaderViewHolder {
         public TextView txtHeader;
-    }
 
+    }
     static class ViewHolder {
         public TextView txtAd;
         public TextView txtTarih;
