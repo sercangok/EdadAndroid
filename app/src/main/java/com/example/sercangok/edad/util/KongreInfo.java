@@ -14,9 +14,9 @@ public class KongreInfo {
     public static KongreInfo sonGUn;
 
     public KongreInfo() {
-        ilkGun = new KongreInfo(2014, Calendar.OCTOBER, 17);
-        ikinciGun = new KongreInfo(2014, Calendar.OCTOBER, 18);
-        sonGUn = new KongreInfo(2014, Calendar.OCTOBER, 19);
+        ilkGun = new KongreInfo(2015, Calendar.OCTOBER, 2);
+        ikinciGun = new KongreInfo(2015, Calendar.OCTOBER, 3);
+        sonGUn = new KongreInfo(2015, Calendar.OCTOBER, 4);
     }
 
     public KongreInfo(int kongreYil, int kongreAy, int kongreGun) {

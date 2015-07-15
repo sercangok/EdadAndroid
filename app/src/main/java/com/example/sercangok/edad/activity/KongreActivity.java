@@ -93,7 +93,7 @@ public class KongreActivity extends FragmentActivity implements ProgramAddedToCa
                 return true;
             case R.id.mapAction:
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                Uri geoLocation = Uri.parse("geo:41.048680,28.986519");
+                Uri geoLocation = Uri.parse("geo:41.077338,29.012812?q=41.077338,29.012812");
                 intent.setData(geoLocation);
                 if (intent.resolveActivity(getPackageManager()) != null) {
                     startActivity(intent);

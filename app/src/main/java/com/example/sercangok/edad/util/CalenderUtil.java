@@ -33,8 +33,8 @@ public class CalenderUtil {
         this.context = context;
         beginTime = Calendar.getInstance();
         endTime = Calendar.getInstance();
-        beginTime.set(2014, Calendar.OCTOBER, 17, 9, 30);
-        endTime.set(2014, Calendar.OCTOBER, 19, 15, 30);
+        beginTime.set(2015, Calendar.OCTOBER, 2, 8, 0);
+        endTime.set(2015, Calendar.OCTOBER, 4, 15, 30);
         _beginTime = beginTime.getTimeInMillis();
         _endTime = endTime.getTimeInMillis();
         setRemainderEdadKongre(addEventToCalender(getCalenders().get(0)));
