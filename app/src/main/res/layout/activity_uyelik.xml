@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:padding="20dp"
         android:orientation="vertical"
-        tools:context="com.example.sercangok.edad.activity.UyeActivity">
+        tools:context="com.salyangoz.edad.activity.UyeActivity">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -32,7 +32,7 @@
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_marginBottom="15dp">
 
-                <com.example.sercangok.edad.view.TextView700
+                <com.salyangoz.edad.view.TextView700
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -41,7 +41,7 @@
                     android:textSize="14sp"
                     android:textColor="@color/edadRedFontColor" />
 
-                <com.example.sercangok.edad.view.TextView700
+                <com.salyangoz.edad.view.TextView700
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -50,7 +50,7 @@
                     android:textSize="14sp"
                     android:textColor="@android:color/white" />
 
-                <com.example.sercangok.edad.view.TextView700
+                <com.salyangoz.edad.view.TextView700
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -85,7 +85,7 @@
                         android:background="@drawable/sartlar"
                         android:layout_gravity="center" />
 
-                    <com.example.sercangok.edad.view.TextView300
+                    <com.salyangoz.edad.view.TextView300
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:textSize="16sp"
@@ -96,7 +96,7 @@
                         android:text="Üyelik Şartları" />
                 </LinearLayout>
 
-                <com.example.sercangok.edad.view.TextView300
+                <com.salyangoz.edad.view.TextView300
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="12sp"
@@ -134,7 +134,7 @@
                         android:background="@drawable/avantajlar"
                         android:layout_gravity="center" />
 
-                    <com.example.sercangok.edad.view.TextView300
+                    <com.salyangoz.edad.view.TextView300
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:textSize="16sp"
@@ -145,7 +145,7 @@
                         android:text="Üyelik Avantajları" />
                 </LinearLayout>
 
-                <com.example.sercangok.edad.view.TextView300
+                <com.salyangoz.edad.view.TextView300
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/edadFontColor"

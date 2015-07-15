@@ -45,7 +45,7 @@
                 android:layout_weight="6"
                 android:orientation="vertical">
 
-                <com.example.sercangok.edad.view.TextView500
+                <com.salyangoz.edad.view.TextView500
                     android:id="@+id/txtUnvan"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
@@ -55,7 +55,7 @@
                     android:textColor="@android:color/white"
                     android:gravity="center|left|bottom" />
 
-                <com.example.sercangok.edad.view.TextView300
+                <com.salyangoz.edad.view.TextView300
                     android:id="@+id/txtIsım"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
@@ -91,7 +91,7 @@
                     android:layout_gravity="center" />
             </FrameLayout>
 
-            <com.example.sercangok.edad.view.TextView300
+            <com.salyangoz.edad.view.TextView300
                 android:id="@+id/txtAdress"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -129,7 +129,7 @@
                     android:layout_gravity="center" />
             </FrameLayout>
 
-            <com.example.sercangok.edad.view.TextView300
+            <com.salyangoz.edad.view.TextView300
                 android:id="@+id/txtTel"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -168,7 +168,7 @@
                     android:layout_gravity="center" />
             </FrameLayout>
 
-            <com.example.sercangok.edad.view.TextView300
+            <com.salyangoz.edad.view.TextView300
                 android:id="@+id/txtEvTel"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -207,7 +207,7 @@
                     android:layout_gravity="center" />
             </FrameLayout>
 
-            <com.example.sercangok.edad.view.TextView300
+            <com.salyangoz.edad.view.TextView300
                 android:id="@+id/txtFax"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -246,7 +246,7 @@
                     android:layout_gravity="center" />
             </FrameLayout>
 
-            <com.example.sercangok.edad.view.TextView300
+            <com.salyangoz.edad.view.TextView300
                 android:id="@+id/txtMail"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"

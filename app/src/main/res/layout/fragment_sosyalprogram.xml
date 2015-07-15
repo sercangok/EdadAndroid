@@ -15,7 +15,7 @@
         android:background="@drawable/sosyaltakvim"
         android:layout_marginBottom="5dp" />
 
-    <com.example.sercangok.edad.view.TextView300
+    <com.salyangoz.edad.view.TextView300
         android:id="@+id/txtIsım"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
         android:background="@drawable/sosyalzaman"
         android:layout_marginBottom="5dp" />
 
-    <com.example.sercangok.edad.view.TextView300
+    <com.salyangoz.edad.view.TextView300
         android:id="@+id/txtTarih"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
         android:background="@drawable/sosyalyer"
         android:layout_marginBottom="5dp" />
 
-    <com.example.sercangok.edad.view.TextView300
+    <com.salyangoz.edad.view.TextView300
         android:id="@+id/txtAdress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

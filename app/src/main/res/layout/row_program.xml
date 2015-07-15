@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.example.sercangok.edad.view.TextView300
+        <com.salyangoz.edad.view.TextView300
             android:id="@+id/txtSaat"
             android:layout_width="0dp"
             android:layout_height="75dp"
@@ -28,7 +28,7 @@
             android:layout_width="0dp"
             android:layout_weight="3">
 
-            <com.example.sercangok.edad.view.TextView500
+            <com.salyangoz.edad.view.TextView500
                 android:id="@+id/txtTitle"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -41,7 +41,7 @@
                 android:paddingTop="10dp"
                 android:layout_gravity="center" />
 
-            <com.example.sercangok.edad.view.TextView300
+            <com.salyangoz.edad.view.TextView300
                 android:padding="5dp"
                 android:id="@+id/txtAcıklama"
                 android:layout_width="match_parent"
@@ -54,7 +54,7 @@
                 android:layout_gravity="center" />
         </LinearLayout>
 
-        <com.example.sercangok.edad.view.TextView500
+        <com.salyangoz.edad.view.TextView500
             android:id="@+id/txtTitle2"
             android:layout_width="0dp"
             android:layout_height="75dp"

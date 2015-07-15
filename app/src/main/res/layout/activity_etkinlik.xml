@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context="com.example.sercangok.edad.activity.EtkinlikActivity">
+    tools:context="com.salyangoz.edad.activity.EtkinlikActivity">
 
     <ProgressBar
         android:id="@+id/prgEtkinlik"

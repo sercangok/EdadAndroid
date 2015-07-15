@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:layout_margin="20dp"
     android:orientation="vertical"
-    tools:context="com.example.sercangok.edad.activity.IletisimActivity">
+    tools:context="com.salyangoz.edad.activity.IletisimActivity">
 
 
     <TableRow
@@ -27,7 +27,7 @@
                 android:layout_gravity="center"
                 android:background="@drawable/logoiletisim" />
 
-            <com.example.sercangok.edad.view.TextView300
+            <com.salyangoz.edad.view.TextView300
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|bottom"
@@ -58,7 +58,7 @@
                 android:layout_gravity="center"
                 android:background="@drawable/logoiletisim" />
 
-            <com.example.sercangok.edad.view.TextView300
+            <com.salyangoz.edad.view.TextView300
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|bottom"

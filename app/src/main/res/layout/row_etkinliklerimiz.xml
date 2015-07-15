@@ -14,7 +14,7 @@
         android:weightSum="5.5"
         android:layout_margin="10dp">
 
-        <com.example.sercangok.edad.view.TextView500
+        <com.salyangoz.edad.view.TextView500
             android:id="@+id/txtKategori"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
                 android:background="@drawable/takvimbuttondrawable"
                 android:layout_gravity="center">
 
-                <com.example.sercangok.edad.view.TextView500
+                <com.salyangoz.edad.view.TextView500
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     android:gravity="center"
@@ -87,7 +87,7 @@
                 android:layout_gravity="center" />
         </FrameLayout>
 
-        <com.example.sercangok.edad.view.TextView300
+        <com.salyangoz.edad.view.TextView300
             android:id="@+id/txtAd"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -120,7 +120,7 @@
                 android:layout_gravity="center" />
         </FrameLayout>
 
-        <com.example.sercangok.edad.view.TextView300
+        <com.salyangoz.edad.view.TextView300
             android:id="@+id/txtTarih"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -152,7 +152,7 @@
                 android:layout_gravity="center|top" />
         </FrameLayout>
 
-        <com.example.sercangok.edad.view.TextView300
+        <com.salyangoz.edad.view.TextView300
             android:id="@+id/txtAdress"
             android:layout_width="0dp"
             android:layout_height="match_parent"

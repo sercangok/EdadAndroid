@@ -1,6 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.sercangok.edad.activity.UyelikActivity">
+    tools:context="com.salyangoz.edad.activity.UyelikActivity">
     <item
         android:id="@+id/mapAction"
         android:title="Map"

@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.sercangok.edad.activity.IstGenelMerkezActivity">
+    tools:context="com.salyangoz.edad.activity.IstGenelMerkezActivity">
 
 
     <ProgressBar

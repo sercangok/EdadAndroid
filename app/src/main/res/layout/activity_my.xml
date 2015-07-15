@@ -41,7 +41,7 @@
                 android:layout_height="match_parent"
                 android:scaleType="fitXY" />
 
-            <com.example.sercangok.edad.view.TextView700
+            <com.salyangoz.edad.view.TextView700
                 android:layout_height="wrap_content"
                 android:textSize="25sp"
                 android:text="KONGRE"
@@ -73,7 +73,7 @@
                 android:layout_gravity="center"
                 android:scaleType="fitXY" />
 
-            <com.example.sercangok.edad.view.TextView500
+            <com.salyangoz.edad.view.TextView500
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
                 android:text="ETKİNLİKLERİMİZ"
@@ -106,7 +106,7 @@
                 android:layout_gravity="center"
                 android:scaleType="fitXY" />
 
-            <com.example.sercangok.edad.view.TextView500
+            <com.salyangoz.edad.view.TextView500
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
                 android:text="ÜYELİK"
@@ -140,7 +140,7 @@
                 android:layout_gravity="center"
                 android:scaleType="fitXY" />
 
-            <com.example.sercangok.edad.view.TextView500
+            <com.salyangoz.edad.view.TextView500
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
                 android:text="HAKKIMIZDA"
@@ -176,7 +176,7 @@
                 android:layout_gravity="center"
                 android:scaleType="fitXY" />
 
-            <com.example.sercangok.edad.view.TextView500
+            <com.salyangoz.edad.view.TextView500
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
                 android:text="İLETİŞİM"
@@ -225,7 +225,7 @@
             android:layout_width="wrap_content"
             android:src="@drawable/espe"
             android:background="@android:color/transparent"
-            android:onClick="onClick_Espe" />
+            android:onClick="threemclick" />
 
         <ImageButton
             android:layout_marginRight="3dp"
@@ -271,7 +271,7 @@
                 android:layout_marginRight="10dp" />
 
 
-            <com.example.sercangok.edad.view.TextView700
+            <com.salyangoz.edad.view.TextView700
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -280,7 +280,7 @@
                 android:textSize="16sp"
                 android:textColor="@color/edadRedFontColor" />
 
-            <com.example.sercangok.edad.view.TextView700
+            <com.salyangoz.edad.view.TextView700
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -289,7 +289,7 @@
                 android:textSize="16sp"
                 android:textColor="@android:color/white" />
 
-            <com.example.sercangok.edad.view.TextView700
+            <com.salyangoz.edad.view.TextView700
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.sercangok.edad">
+    package="com.salyangoz.edad">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_CALENDAR" />
@@ -13,9 +13,8 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <permission
-        android:name="com.example.sercangok.edad.permission.C2D_MESSAGE"
-        android:protectionLevel="signature" />
-    <uses-permission android:name="com.example.sercangok.edad.permission.C2D_MESSAGE" />
+        android:name="com.salyangoz.edad.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.salyangoz.edad.permission.C2D_MESSAGE" />
 
     <application
         android:allowBackup="true"
@@ -23,7 +22,7 @@
         android:label="@string/app_name"
         android:theme="@style/edadTheme">
         <activity
-            android:name=".activity.SplashScreenActivity"
+            android:name="com.salyangoz.edad.activity.SplashScreenActivity"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -33,53 +32,53 @@
         </activity>
 
         <activity
-            android:name=".activity.mainActivity.MainActivity"
+            android:name="com.salyangoz.edad.activity.mainActivity.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/edadTheme2"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".activity.KongreActivity"
+            android:name="com.salyangoz.edad.activity.KongreActivity"
             android:label="@string/title_activity_kongre"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".activity.fragmentActivity.KongreFragmetnActivity"
+            android:name="com.salyangoz.edad.activity.fragmentActivity.KongreFragmetnActivity"
             android:label="@string/title_activity_kongre"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".activity.HakkimizdaActivity"
+            android:name="com.salyangoz.edad.activity.HakkimizdaActivity"
             android:label="@string/title_activity_hakkimizda"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".activity.UyelikActivity"
+            android:name="com.salyangoz.edad.activity.UyelikActivity"
             android:label="@string/title_activity_uyelik"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".activity.EtkinlikActivity"
+            android:name="com.salyangoz.edad.activity.EtkinlikActivity"
             android:label="@string/title_activity_etkinlik"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".activity.IletisimActivity"
+            android:name="com.salyangoz.edad.activity.IletisimActivity"
             android:label="@string/title_activity_iletisim"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".activity.TemsilciliklerimizActivity"
+            android:name="com.salyangoz.edad.activity.TemsilciliklerimizActivity"
             android:label="@string/title_activity_temsilciliklerimiz"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".activity.IstGenelMerkezActivity"
+            android:name="com.salyangoz.edad.activity.IstGenelMerkezActivity"
             android:label="@string/title_activity_ist_genel_merkez"
             android:screenOrientation="portrait"></activity>
 
         <receiver
-            android:name=".service.receiver.GsmBroadCastReceiver"
+            android:name="com.salyangoz.edad.service.receiver.GsmBroadCastReceiver"
             android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <category android:name="com.example.sercangok.edad" />
+                <category android:name="com.salyangoz.edad" />
             </intent-filter>
         </receiver>
-        <service android:name=".service.FavoriTimingService"/>
-        <service android:name=".service.GcmIntentService" />
+        <service android:name="com.salyangoz.edad.service.FavoriTimingService"/>
+        <service android:name="com.salyangoz.edad.service.GcmIntentService" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

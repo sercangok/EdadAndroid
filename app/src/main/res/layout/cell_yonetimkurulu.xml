@@ -35,7 +35,7 @@
     </FrameLayout>
 
 
-    <com.example.sercangok.edad.view.TextView500
+    <com.salyangoz.edad.view.TextView500
         android:id="@+id/txtPozisyon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
         android:layout_gravity="center"
         android:gravity="center|bottom" />
 
-    <com.example.sercangok.edad.view.TextView300
+    <com.salyangoz.edad.view.TextView300
         android:id="@+id/txtAdSoyad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

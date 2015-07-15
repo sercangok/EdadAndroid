@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.sercangok.edad.activity.HakkimizdaActivity"
+    tools:context="com.salyangoz.edad.activity.HakkimizdaActivity"
     android:orientation="vertical">
 
 
@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <com.example.sercangok.edad.view.TextView300
+                <com.salyangoz.edad.view.TextView300
                     android:id="@+id/txtHakkimizda"
                     android:text="Değerli Edad uyeleri"
                     android:layout_width="wrap_content"
@@ -59,7 +59,7 @@
             </ScrollView>
         </LinearLayout>
 
-        <com.example.sercangok.edad.view.TextView300
+        <com.salyangoz.edad.view.TextView300
             android:text="YÖNETİM KURULU"
             android:layout_width="match_parent"
             android:layout_height="0dp"

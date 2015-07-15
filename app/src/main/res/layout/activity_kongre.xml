@@ -1,6 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.sercangok.edad.activity.KongreActivity"
+    tools:context="com.salyangoz.edad.activity.KongreActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -62,7 +62,7 @@
                     android:layout_weight="0.7"
                     android:gravity="center">
 
-                    <com.example.sercangok.edad.view.TextView300
+                    <com.salyangoz.edad.view.TextView300
                         android:id="@+id/txtHafta"
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
@@ -72,7 +72,7 @@
                         android:gravity="center"
                         android:textSize="20sp" />
 
-                    <com.example.sercangok.edad.view.TextView300
+                    <com.salyangoz.edad.view.TextView300
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Hafta"
@@ -92,7 +92,7 @@
                     android:gravity="center"
                     android:textSize="30sp">
 
-                    <com.example.sercangok.edad.view.TextView300
+                    <com.salyangoz.edad.view.TextView300
                         android:id="@+id/txtGun"
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
@@ -102,7 +102,7 @@
                         android:gravity="center"
                         android:textSize="20sp" />
 
-                    <com.example.sercangok.edad.view.TextView300
+                    <com.salyangoz.edad.view.TextView300
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -122,7 +122,7 @@
                     android:textSize="30sp"
                     android:orientation="vertical">
 
-                    <com.example.sercangok.edad.view.TextView300
+                    <com.salyangoz.edad.view.TextView300
                         android:id="@+id/txtSaat"
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
@@ -132,7 +132,7 @@
                         android:gravity="center"
                         android:textSize="20sp" />
 
-                    <com.example.sercangok.edad.view.TextView300
+                    <com.salyangoz.edad.view.TextView300
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -152,7 +152,7 @@
                     android:textSize="30sp"
                     android:orientation="vertical">
 
-                    <com.example.sercangok.edad.view.TextView300
+                    <com.salyangoz.edad.view.TextView300
                         android:id="@+id/txtDakika"
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
@@ -162,7 +162,7 @@
                         android:gravity="center"
                         android:textSize="20sp" />
 
-                    <com.example.sercangok.edad.view.TextView300
+                    <com.salyangoz.edad.view.TextView300
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Dakika"
@@ -177,7 +177,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.example.sercangok.edad.view.TextView300
+                <com.salyangoz.edad.view.TextView300
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:text="PROGRAM"
@@ -200,7 +200,7 @@
                         android:weightSum="10"
                         android:orientation="vertical">
 
-                        <com.example.sercangok.edad.view.TextView300
+                        <com.salyangoz.edad.view.TextView300
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_gravity="center"
@@ -219,7 +219,7 @@
                     </LinearLayout>
 
 
-                    <com.example.sercangok.edad.view.TextView300
+                    <com.salyangoz.edad.view.TextView300
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:gravity="center"
@@ -235,7 +235,7 @@
                         android:weightSum="10"
                         android:orientation="vertical">
 
-                        <com.example.sercangok.edad.view.TextView300
+                        <com.salyangoz.edad.view.TextView300
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_gravity="center"
@@ -255,7 +255,7 @@
                     </LinearLayout>
 
 
-                    <com.example.sercangok.edad.view.TextView300
+                    <com.salyangoz.edad.view.TextView300
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:gravity="center"
@@ -271,7 +271,7 @@
                         android:weightSum="10"
                         android:orientation="vertical">
 
-                        <com.example.sercangok.edad.view.TextView300
+                        <com.salyangoz.edad.view.TextView300
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_gravity="center"
@@ -291,7 +291,7 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <com.example.sercangok.edad.view.ExpandableHeightGridView
+                <com.salyangoz.edad.view.ExpandableHeightGridView
                     android:id="@+id/lstProgram"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -306,7 +306,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.example.sercangok.edad.view.TextView300
+                <com.salyangoz.edad.view.TextView300
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:text="SOSYAL PROGRAM"
@@ -330,7 +330,7 @@
                         android:weightSum="10"
                         android:orientation="vertical">
 
-                        <com.example.sercangok.edad.view.TextView300
+                        <com.salyangoz.edad.view.TextView300
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_gravity="center"
@@ -349,7 +349,7 @@
                     </LinearLayout>
 
 
-                    <com.example.sercangok.edad.view.TextView300
+                    <com.salyangoz.edad.view.TextView300
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:gravity="center"
@@ -365,7 +365,7 @@
                         android:weightSum="10"
                         android:orientation="vertical">
 
-                        <com.example.sercangok.edad.view.TextView300
+                        <com.salyangoz.edad.view.TextView300
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_gravity="center"
@@ -386,7 +386,7 @@
 
                 </LinearLayout>
 
-                <com.example.sercangok.edad.view.ExpandableHeightGridView
+                <com.salyangoz.edad.view.ExpandableHeightGridView
                     android:id="@+id/lstSosyal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
